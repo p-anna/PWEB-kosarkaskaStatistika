@@ -13,11 +13,15 @@
 <body>
     <div id="wrapper" ng-controller="navCtrl">
         <div ng-include="'components/navigation.html'"></div>
-        <div ng-if="showPlayers"  ng-include="'components/players.html'"></div>
+        <div ng-controller="playersCtrl" ng-if="showPlayers"  ng-include="'components/players.html'"></div>
+        <div ng-if="showTeams"  ng-include="'components/teams.html'"></div>
+        <div ng-if="showSeasons"  ng-include="'components/seasons.html'"></div>
     </div>
 </body>
 <script src="js/jquery.js"></script>
 <script src="js/angular.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="controllers/navCtrl.js"></script>
+<script src="controllers/playersCtrl.js"></script>
+<script type="text/javascript" src="data/players.json"></script>
 </html>
