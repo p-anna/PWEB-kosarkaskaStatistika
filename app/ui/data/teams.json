@@ -1,0 +1,52 @@
+{
+  "teams": [
+    {
+      "ID": 1,
+      "Name": "Crvena Zvezda MTS Belgrade",
+      "photoURL": "http://www.euroleague.net/rs/6cjppkrn7bchf79v/5fae8dff-b186-4e7f-a158-c16e8e479736/316/filename/5fa.png",
+      "Country": "Serbia"
+    },
+    {
+      "ID": 2,
+      "Name": "CSKA Moscow",
+      "photoURL": "http://www.euroleague.net/rs/14520/5fae8dff-b186-4e7f-a158-c16e8e479736/905/filename/5fa.png",
+      "Country": "Russia"
+    },
+    {
+      "ID": 3,
+      "Name": "Crvena Zvezda MTS Belgrade",
+      "photoURL": "http://www.euroleague.net/rs/6cjppkrn7bchf79v/5fae8dff-b186-4e7f-a158-c16e8e479736/316/filename/5fa.png",
+      "Country": "Serbia"
+    },
+    {
+      "ID": 4,
+      "Name": "CSKA Moscow",
+      "photoURL": "http://www.euroleague.net/rs/14520/5fae8dff-b186-4e7f-a158-c16e8e479736/905/filename/5fa.png",
+      "Country": "Russia"
+    },
+    {
+      "ID": 5,
+      "Name": "Crvena Zvezda MTS Belgrade",
+      "photoURL": "http://www.euroleague.net/rs/6cjppkrn7bchf79v/5fae8dff-b186-4e7f-a158-c16e8e479736/316/filename/5fa.png",
+      "Country": "Serbia"
+    },
+    {
+      "ID": 6,
+      "Name": "CSKA Moscow",
+      "photoURL": "http://www.euroleague.net/rs/14520/5fae8dff-b186-4e7f-a158-c16e8e479736/905/filename/5fa.png",
+      "Country": "Russia"
+    },
+    {
+      "ID": 7,
+      "Name": "Crvena Zvezda MTS Belgrade",
+      "photoURL": "http://www.euroleague.net/rs/6cjppkrn7bchf79v/5fae8dff-b186-4e7f-a158-c16e8e479736/316/filename/5fa.png",
+      "Country": "Serbia"
+    },
+    {
+      "ID": 8,
+      "Name": "CSKA Moscow",
+      "photoURL": "http://www.euroleague.net/rs/14520/5fae8dff-b186-4e7f-a158-c16e8e479736/905/filename/5fa.png",
+      "Country": "Russia"
+    }
+  ]
+}

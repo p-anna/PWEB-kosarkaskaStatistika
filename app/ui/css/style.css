@@ -1,3 +1,7 @@
+body {
+    line-height: 2.429;
+}
+
 h2 {
     margin-top: 0px;
     margin-bottom: 10px;
@@ -19,4 +23,33 @@ hr {
 
 ul {
     list-style-type: none;
+}
+
+#teamItem {
+    padding: 5px;
+}
+ul > li > a {
+    color: black;
+    text-decoration: none;
+}
+ul > li > a:hover {
+    color: black;
+    cursor:pointer;
+}
+
+ul > li > img {
+    width:70px;
+    height:70px;
+    box-sizing: border-box;
+}
+
+#player {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 455px){
+    #player {
+        font-size: 12px;
+    }
 }

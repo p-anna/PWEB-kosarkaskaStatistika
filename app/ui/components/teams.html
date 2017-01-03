@@ -12,7 +12,18 @@
         </div>
     </div>
 
+
     <br>
+    <br>
+
+    <ul>
+        <li id="teamItem" class="col-xs-6 col-md-4" ng-repeat="team in teams">
+            <img src={{team.photoURL}}>
+            <a>{{team.Name}}</a>
+        </li>
+    </ul>
+
+
     <!--<div class="container-fluid">-->
     <!--<div class="row">-->
     <!--<div class="col-lg-6">-->
