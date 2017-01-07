@@ -1,0 +1,44 @@
+<div id="wrapper">
+
+    <div id="page-wrapper">
+        <h2>Referees</h2>
+        <hr>
+
+        <div class="container">
+            <form>
+                <select class="form-control col-xs-4" id="sel1">
+                    <option>Accumulated Statistics</option>
+                    <option selected>Average - Per Game</option>
+                    <option>nesto</option>
+                    <option>nesto jos</option>
+                </select>
+                <select class="form-control col-xs-4" id="sel2">
+                    <option selected>All teams</option>
+                    <option ng-repeat="team in teams">{{team.Name}}</option>
+                </select>
+                <select class="form-control col-xs-4" id="sel2">
+                    <option selected>Full Season</option>
+                    <option ng-repeat="team in teams">{{team.Name}}</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Referee</th>
+                    <th>Nesto</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="referee in referees">
+                    <td>{{referee.Name}}</td>
+                    <td>{{referee.photoUrl}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
