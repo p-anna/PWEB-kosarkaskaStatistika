@@ -6,16 +6,16 @@
             <form>
                 <select class="form-control col-xs-4" id="sel1" ng-change="sortiranje()" ng-model="selected1">
                     <option>Accumulated Statistics</option>
-                    <option selected>Average - Per Game</option>
+                    <option>Average - Per Game</option>
                     <option>nesto</option>
                     <option>nesto jos</option>
                 </select>
                 <select class="form-control col-xs-4" id="sel2" ng-change="sortiranje()" ng-model="selected2">
-                    <option selected>All teams</option>
+                    <option>All Teams</option>
                     <option ng-repeat="team in teams">{{team.Name}}</option>
                 </select>
                 <select class="form-control col-xs-4" id="sel3" ng-change="sortiranje()" ng-model="selected3">
-                    <option selected>Full Season</option>
+                    <option>Full Season</option>
                     <option ng-repeat="team in teams">{{team.Name}}</option>
                 </select>
             </form>
