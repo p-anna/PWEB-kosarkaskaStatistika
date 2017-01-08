@@ -1,10 +1,13 @@
+
 app.controller('playersController', function($scope, $timeout, $http){
     $scope.players = [];
     $scope.teams = [];
+
     $scope.sortiranje = function(){
-        alert("Ovo je izabran: " + $scope.selectedGroup1);
+        alert("Ovo je izabran: " + $scope.selected1 + $scope.selected2 + $scope.selected3);
         /* ovde neko sortiranje */
     };
+
 
 
     init();
