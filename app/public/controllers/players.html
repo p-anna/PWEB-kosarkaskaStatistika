@@ -1,0 +1,47 @@
+<div id="wrapper">
+
+    <div id="page-wrapper">
+        <h2>Players</h2>
+        <hr>
+        <div class="container">
+            <form action="" method="GET">
+                <select class="form-control col-xs-4" id="sel1" ng-change="sortiranje()" ng-model="selectedGroup1">
+                    <option>Accumulated Statistics</option>
+                    <option selected>Average - Per Game</option>
+                    <option>nesto</option>
+                    <option>nesto jos</option>
+                </select>
+                <select class="form-control col-xs-4" id="sel2" ng-change="sortiranje()" ng-model="selectedGroup2">
+                    <option selected>All teams</option>
+                    <option ng-repeat="team in teams">{{team.Name}}</option>
+                </select>
+                <select class="form-control col-xs-4" id="sel3" ng-change="sortiranje()" ng-model="selectedGroup3">
+                    <option selected>Full Season</option>
+                    <option ng-repeat="team in teams">{{team.Name}}</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Height</th>
+                    <th>Nationality</th>
+                    <th>Team</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="player in players">
+                    <td>{{player.playerName}}</td>
+                    <td>{{player.playerHeight}}cm</td>
+                    <td>{{player.nationality}}</td>
+                    <td>{{player.team}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
