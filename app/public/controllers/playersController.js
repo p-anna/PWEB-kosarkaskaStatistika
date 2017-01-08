@@ -2,6 +2,7 @@ app.controller('playersController', function($scope, $timeout, $http){
     $scope.players = [];
     $scope.teams = [];
 
+
     init();
 
     function init() {
