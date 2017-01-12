@@ -7,11 +7,17 @@ app.controller('playersController', function($scope, $timeout, $http){
     $scope.selected3 = "Full Season";
 
 
-    $scope.sortiranje = function(){
-        /* ovde ubacis lopiticu koji bounce*/
+    $scope.prikazi = function(){
         alert("Ovo je izabran: " + $scope.selected1 + $scope.selected2 + $scope.selected3);
-        /* ovde neko $http.get(nesto.php/$scope.selected1/$scope.selected2/$scop.selected3) */
 
+        /* jos nije pozevan
+        $http.get("http:/ljubica/source/primercic.php/players/" + $scope.selected1 + "/" + $scope.selected2 + "/" + $scope.selected3)
+            .then(function(response){
+                $scope.players = response.data.players;
+            })
+            .error(function (msg) {
+                console.log("Poruka kod zvanja php-a: " + msg);
+            });*/
     };
 
 
@@ -19,11 +25,11 @@ app.controller('playersController', function($scope, $timeout, $http){
     init();
 
     function init() {
+        /*$scope.prikazi(); treba povezati */
         $http.get("data/players.json")
             .then(function(response) {
                 $scope.players = response.data.players;
-            })
-            .error;
+            });
         $http.get("data/teams.json")
             .then(function(response) {
                 $scope.teams = response.data.teams;
