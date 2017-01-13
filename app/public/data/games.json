@@ -2,27 +2,27 @@
   "games": [
     {
       "game": "Fenerbahce Ulker - CSKA Moscow",
-      "attendance": 12250,
-      "min": 49,
+      "attendance": 12230,
+      "min": 51,
       "pace": 66
     },
     {
-      "game": "Fenerbahce Ulker - CSKA Moscow",
-      "attendance": 12250,
+      "game": "Olimpijakos - CSKA Moscow",
+      "attendance": 12270,
       "min": 49,
-      "pace": 66
+      "pace": 67
     },
     {
-      "game": "Fenerbahce Ulker - CSKA Moscow",
+      "game": "Fenerbahce Ulker - Partizan",
       "attendance": 12250,
-      "min": 49,
-      "pace": 66
+      "min": 50,
+      "pace": 76
     },
     {
-      "game": "Fenerbahce Ulker - CSKA Moscow",
-      "attendance": 12250,
-      "min": 49,
-      "pace": 66
+      "game": "Szolnok - CSKA Moscow",
+      "attendance": 12290,
+      "min": 65,
+      "pace": 166
     }
   ]
 }
