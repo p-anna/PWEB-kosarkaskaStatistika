@@ -14,39 +14,39 @@
     },
     {
       "ID": 3,
-      "Name": "Crvena Zvezda MTS Belgrade",
+      "Name": "Armani Milano",
       "photoURL": "http://www.euroleague.net/rs/6cjppkrn7bchf79v/5fae8dff-b186-4e7f-a158-c16e8e479736/316/filename/5fa.png",
-      "Country": "Serbia"
+      "Country": "Italija"
     },
     {
       "ID": 4,
-      "Name": "CSKA Moscow",
+      "Name": "Galatasaraj",
       "photoURL": "http://www.euroleague.net/rs/14520/5fae8dff-b186-4e7f-a158-c16e8e479736/905/filename/5fa.png",
-      "Country": "Russia"
+      "Country": "Turska"
     },
     {
       "ID": 5,
-      "Name": "Crvena Zvezda MTS Belgrade",
+      "Name": "Zalgiris",
       "photoURL": "http://www.euroleague.net/rs/6cjppkrn7bchf79v/5fae8dff-b186-4e7f-a158-c16e8e479736/316/filename/5fa.png",
-      "Country": "Serbia"
+      "Country": "Litvanija"
     },
     {
       "ID": 6,
-      "Name": "CSKA Moscow",
+      "Name": "Olimpijakos",
       "photoURL": "http://www.euroleague.net/rs/14520/5fae8dff-b186-4e7f-a158-c16e8e479736/905/filename/5fa.png",
-      "Country": "Russia"
+      "Country": "Grcka"
     },
     {
       "ID": 7,
-      "Name": "Crvena Zvezda MTS Belgrade",
+      "Name": "Fenerbahce Ulker",
       "photoURL": "http://www.euroleague.net/rs/6cjppkrn7bchf79v/5fae8dff-b186-4e7f-a158-c16e8e479736/316/filename/5fa.png",
-      "Country": "Serbia"
+      "Country": "Turska"
     },
     {
       "ID": 8,
-      "Name": "CSKA Moscow",
+      "Name": "Szolnok",
       "photoURL": "http://www.euroleague.net/rs/14520/5fae8dff-b186-4e7f-a158-c16e8e479736/905/filename/5fa.png",
-      "Country": "Russia"
+      "Country": "Madjarska"
     }
   ]
 }

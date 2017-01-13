@@ -2,9 +2,18 @@
 app.controller('playersController', function($scope, $timeout, $http){
     $scope.players = [];
     $scope.teams = [];
+
     $scope.selected1 = "Average - Per Game";
     $scope.selected2 = "All Teams";
     $scope.selected3 = "Full Season";
+
+    $scope.propertyName = 'playerName';
+    $scope.reverse = true;
+
+    $scope.sortBy = function(propertyName) {
+        $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
+        $scope.propertyName = propertyName;
+    };
 
 
     $scope.prikazi = function(){
@@ -19,8 +28,6 @@ app.controller('playersController', function($scope, $timeout, $http){
                 console.log("Poruka kod zvanja php-a: " + msg);
             });*/
     };
-
-
 
     init();
 

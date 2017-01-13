@@ -1,3 +1,8 @@
-app.controller('homeController', function () {
+app.controller('homeController', function ($scope) {
+    /*init();
 
+    function init() {
+      $scope.isHome = 'true';
+    };
+*/
 });
