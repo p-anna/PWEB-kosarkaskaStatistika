@@ -62,3 +62,8 @@ ul > li > img {
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
     background-color: palegreen;
 }
+
+.img-circle {
+    max-width: 100%;
+    height: auto;
+}

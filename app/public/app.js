@@ -21,5 +21,9 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when('/games', {
             templateUrl: "templates/games.html",
             controller: 'gamesController'
+        })
+        .when('/player/:id', {
+            templateUrl: "templates/player.html",
+            controller: 'playerController'
         });
 }]);

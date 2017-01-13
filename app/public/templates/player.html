@@ -1,0 +1,28 @@
+<div>
+    <div class="span3 well">
+        <a href="#" data-toggle="modal" data-target="#myModal"><img
+                src="{{player.photoURL}}"
+                name="aboutme" width="330" height="165" class="img-circle"></a>
+    </div>
+
+    <div class="container">
+        <table class="table table-striped table-hover">
+            <thead>
+            <tr>
+                <th>Player</th>
+                <th>Height</th>
+                <th>Nationality</th>
+                <th>Team</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{player.name}}</td>
+                <td>{{player.height}}cm</td>
+                <td>{{player.nationality}}</td>
+                <td>{{player.team}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

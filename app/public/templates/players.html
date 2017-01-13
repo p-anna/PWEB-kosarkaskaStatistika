@@ -35,7 +35,7 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="player in players">
-                    <td>{{player.playerName}}</td>
+                    <td><a href="#/player/{{player.playerID}}">{{player.playerName}}</a></td>
                     <td>{{player.playerHeight}}cm</td>
                     <td>{{player.nationality}}</td>
                     <td>{{player.team}}</td>
