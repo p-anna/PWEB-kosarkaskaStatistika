@@ -4,18 +4,18 @@
         <h2>Games</h2>
         <hr>
         <div class="container">
-            <form action="" method="GET">
-                <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="select1">
+            <form>
+                <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="selected1">
                     <option>Accumulated Statistics</option>
                     <option>Average - Per Game</option>
                     <option>nesto</option>
                     <option>nesto jos</option>
                 </select>
-                <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="select2">
-                    <option>All teams</option>
+                <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="selected2">
+                    <option>All Teams</option>
                     <option ng-repeat="team in teams | orderBy:'Name'">{{team.Name}}</option>
                 </select>
-                <select class="form-control col-xs-4" id="sel3" ng-change="prikazi()" ng-model="select2">
+                <select class="form-control col-xs-4" id="sel3" ng-change="prikazi()" ng-model="selected3">
                     <option>Full Season</option>
                     <option ng-repeat="team in teams">{{team.Name}}</option>
                 </select>

@@ -4,7 +4,7 @@
         <h2>Players</h2>
         <hr>
         <div class="container">
-            <form action="" method="GET">
+            <form>
                 <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="selected1">
                     <option>Accumulated Statistics</option>
                     <option>Average - Per Game</option>
@@ -24,7 +24,7 @@
         <br>
         <br>
         <div class="container">
-            <table class="table table-hover">
+            <table class="table table-striped table-hover">
                 <thead>
                 <tr>
                    <!-- <th ng-repeat="header in headers"> {{header.name}}</th> -->
@@ -48,7 +48,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="player in players | orderBy:propertyName:reverse" >
+                <tr ng-repeat="player in players | orderBy:propertyName:reverse " >
                     <!-- <td ng-repeat="header in headers">{{player.(header.name)}}</td> -->
                     <td>{{player.playerName}}</td>
                     <td>{{player.playerHeight}}cm</td>
