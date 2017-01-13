@@ -50,8 +50,6 @@
                 <tbody>
                 <tr ng-repeat="player in players | orderBy:propertyName:reverse " >
                     <!-- <td ng-repeat="header in headers">{{player.(header.name)}}</td> -->
-                    <td>{{player.playerName}}</td>
-                <tr ng-repeat="player in players">
                     <td><a href="#/player/{{player.playerID}}">{{player.playerName}}</a></td>
                     <td>{{player.playerHeight}}cm</td>
                     <td>{{player.nationality}}</td>

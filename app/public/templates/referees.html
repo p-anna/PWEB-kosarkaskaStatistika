@@ -40,7 +40,7 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="referee in referees | orderBy:propertyName:reverse">
-                    <td>{{referee.Name}}</td>
+                    <td><a href="#/referee/{{referee.ID}}">{{referee.Name}}</a></td>
                     <td>{{referee.photoUrl}}</td>
                 </tr>
                 </tbody>
