@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="translation.css" />
 </head>
-<body>
-
+<body class="big-page" ondragstart="return false;">
 
 <!-- OVDE TREBA NESTO SMISLITI, kad je na home onda da bude true, neka promenjiva -->
 <nav class="navbar navbar-default" ng-hide="false">
@@ -53,12 +53,12 @@
 <!--Application code-->
 <script src="app.js"></script>
 <script src="controllers/homeController.js"></script>
-<!--<script src="controllers/baseCtrl.js"></script>-->
-<!--<script src="controllers/navCtrl.js"></script>-->
+<script src="controllers/gamesController.js"></script>
 <script src="controllers/playersController.js"></script>
 <script src="controllers/teamsController.js"></script>
 <script src="controllers/refereesController.js"></script>
 <script src="data/players.json"></script>
 <script src="data/teams.json"></script>
 <script src="data/referees.json"></script>
+<script src="data/games.json"></script>
 </html>
