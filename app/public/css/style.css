@@ -54,11 +54,15 @@ ul > li > img {
     }
 }
 
+
 .form-control {
     width:auto;
     display:inline-block;
 }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-    background-color: palegreen;
+.sortorder:after {
+    content: '\25b2';   // BLACK UP-POINTING TRIANGLE
+}
+.sortorder.reverse:after {
+    content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
 }
