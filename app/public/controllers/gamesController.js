@@ -1,6 +1,7 @@
 app.controller('gamesController', function($scope, $timeout, $http){
 
     $scope.games = [];
+
     $scope.selected1 = "Average - Per Game";
     $scope.selected2 = "All Teams";
     $scope.selected3 = "Full Season";
