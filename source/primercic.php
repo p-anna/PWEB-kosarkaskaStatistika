@@ -3,7 +3,7 @@ error_reporting(0);
 $method = $_SERVER['REQUEST_METHOD'];
 $url_params = explode("/",$_SERVER['PATH_INFO']);
 
-$link = mysqli_connect('localhost','root','','sentiments'); /* ovde treba da se povezete na nasu bazu */
+$link = mysqli_connect('localhost','root','root','mydb');
 mysqli_set_charset($link,'utf8');
 
 if(mysqli_connect_errno())
@@ -14,33 +14,59 @@ if(mysqli_connect_errno())
 $table = $url_params[1];
 
 //Implementirati metodu koja dohvata sve reci iz leksikona
-if($method == 'GET' && $table == 'players' && count($url_params) == 4) // 1 + 3 opadajuce liste
+if($method == 'GET' && $table == 'players' && count($url_params) == 4)
 {
-    $sql = "SELECT * FROM lexicon";
+    file_put_contents("log.txt", "4 parametra");
+    $sql = "SELECT * FROM Player";
 }
 //Metoda koja dohvata samo jednu rec iz leksikona vraca objekat koji sadrzi rec i njen skor ili false ako se trazena rec ne nalazi u leksikonu
-if($method == 'GET' && $table == 'teams' && count($url_params) == 1) // samo imena tima da vratis
+if($method == 'GET' && $table == 'players' && count($url_params) == 3)
+{
+    file_put_contents("log.txt", "3 parametra");
+    $word = $url_params[2];
+    $sql = "SELECT * FROM Player";
+}
+//Implementirati metodu koja upisuje zadatu rec i njenu sentiment ocenu u leksikon
+elseif($method == 'POST' && $table == 'words')
 {
     $word = $url_params[2];
-    $sql = "SELECT * FROM lexicon WHERE word='$word'";
+    $score = $url_params[3];
+    //$sql = "INSERT INTO  VALUES('$word','$score')";
+}
+//Implementirati metodu koja upisuje dokument opisan naslovom, sadrzajem i sentiment ocenom u bazu
+elseif($method == 'POST' && $table == 'documents')
+{
+    $title = $url_params[2];
+    $content = $url_params[3];
+    $score = $url_params[4];
+    //$sql = "INSERT INTO documents(id,title,content,sentment) VALUES(null,'$title','$content','$score')";
 }
 
-
-$result = mysqli_query($link, $sql);
+$sql = "select playerName as '2ft/54' from Player";
+$result = mysqli_query($link,$sql);
 
 if(!$result)
 {
-    printf("SQL ERROR: %s\n",mysqli_error($link));
+    printf("SQL ERROR: %s\n", mysqli_error($link));
 }
 
 if($method == 'GET')
 {
-    echo '[';
-    for($i=0; $i<mysqli_num_rows($result);$i++)
-        echo ($i>0?',':'').json_encode(mysqli_fetch_object($result));
-    echo ']';
-}
+//    echo '[';
+//    for($i=0; $i<mysqli_num_rows($result);$i++)
+//        echo ($i>0?',':'').json_encode(mysqli_fetch_object($result));
+//    echo ']';
 
+      $json = array();
+      for($i=0; $i<mysqli_num_rows($result);$i++)
+          array_push($json, mysqli_fetch_object($result));
+      echo json_encode($json);
+
+}
+elseif($method == 'POST')
+{
+    echo "Data successfully inserted!";
+}
 
 
 mysqli_close($link);
