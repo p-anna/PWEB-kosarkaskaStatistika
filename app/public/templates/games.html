@@ -1,0 +1,59 @@
+<div id="wrapper">
+
+    <div id="page-wrapper">
+        <h2>Games</h2>
+        <hr>
+        <div class="container">
+            <form>
+                <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="selected1">
+                    <option>Accumulated Statistics</option>
+                    <option>Average - Per Game</option>
+                    <option>nesto</option>
+                    <option>nesto jos</option>
+                </select>
+                <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="selected2">
+                    <option>All Teams</option>
+                    <option ng-repeat="team in teams | orderBy:'Name'">{{team.Name}}</option>
+                </select>
+                <select class="form-control col-xs-4" id="sel3" ng-change="prikazi()" ng-model="selected3">
+                    <option>Full Season</option>
+                    <option ng-repeat="team in teams">{{team.Name}}</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>
+                        <button ng-click="sortBy('game')">Game</button>
+                        <span class="sortorder" ng-show="propertyName === 'game'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th>
+                        <button ng-click="sortBy('attendance')">Attendance</button>
+                        <span class="sortorder" ng-show="propertyName === 'attendance'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th>
+                        <button ng-click="sortBy('min')">MIN</button>
+                        <span class="sortorder" ng-show="propertyName === 'min'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                    <th>
+                        <button ng-click="sortBy('pace')">PACE</button>
+                        <span class="sortorder" ng-show="propertyName === 'pace'" ng-class="{reverse: reverse}"></span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="game in games | orderBy:propertyName:reverse">
+                    <td>{{game.game}}</td>
+                    <td>{{game.attendance}}</td>
+                    <td>{{game.min}}</td>
+                    <td>{{game.pace}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

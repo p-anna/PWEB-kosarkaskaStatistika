@@ -1,0 +1,147 @@
+body {
+    line-height: 2.429;
+    background-image: url('../img/background.jpg');
+    background-size: 1600px;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: #d58512;
+    font-style: oblique;
+    font-variant: diagonal-fractions;
+    font-family: "Georgia";
+}
+
+.navbar {
+    margin-bottom: 12px;
+}
+
+hr {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#choose {
+    margin-left: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#teamItem {
+    padding: 5px;
+}
+ul > li > a {
+    color: black;
+    text-decoration: none;
+}
+ul > li > a:hover {
+    color: black;
+    cursor:pointer;
+}
+
+ul > li > img {
+    width:70px;
+    height:70px;
+    box-sizing: border-box;
+}
+
+#player {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 455px){
+    #player {
+        font-size: 12px;
+    }
+}
+
+
+.form-control {
+    width:auto;
+    display:inline-block;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #d58512;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
+    background-color: #fff0c2;
+}
+
+.sortorder:after {
+    content: '\25b2';   // BLACK UP-POINTING TRIANGLE
+}
+.sortorder.reverse:after {
+    content: '\25bc';   // BLACK DOWN-POINTING TRIANGLE
+}
+
+.big-h1{
+    color: #d58512;
+    font-style: oblique;
+    font-variant: diagonal-fractions;
+    font-family: "Georgia";
+}
+
+.entry img {
+    border: none;
+}
+
+#mainContent, #example {
+    position: relative;
+    display: block;
+    width: 800px;
+    border: 2px;
+    margin: 0 auto;
+    height: 600px;
+    overflow: visible;
+}
+
+#ball {
+    position: absolute;
+
+    top: 292px;
+    left: 291px;
+
+
+    -webkit-animation: orbit 4s linear infinite; /* Chrome, Safari 5 */
+    -moz-animation: orbit 4s linear infinite; /* Firefox 5-15 */
+    -o-animation: orbit 4s linear infinite; /* Opera 12+ */
+    animation: orbit 4s linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+
+
+}
+
+/*
+@-webkit-keyframes orbit {
+    from { 	-webkit-transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    to   {  -webkit-transform: rotate(180deg) translateX(50px) rotate(0deg); }
+
+
+@-moz-keyframes orbit {
+    from { 	-moz-transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    to   {  -moz-transform: rotate(180deg) translateX(50px) rotate(0deg); }
+}
+
+@-o-keyframes orbit {
+    from { 	-o-transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    to   {  -o-transform: rotate(180deg) translateX(50px) rotate(0deg); }
+}
+*/
+@keyframes orbit {
+    from { 	transform: rotate(-180deg) translateX(250px) rotate(0deg); }
+    to   {  transform: rotate(0deg) translateX(250px) rotate(0deg); }
+}
+
+
+.img-circle {
+    max-width: 100%;
+    height: auto;
+}
