@@ -6,17 +6,38 @@
             <form>
                 <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="selected1">
                     <option>Accumulated Statistics</option>
-                    <option>Average - Per Game</option>
-                    <option>nesto</option>
-                    <option>nesto jos</option>
+                    <option>Average | Per Game</option>
+                    <option>Average | Per 28 Minutes</option>
+                    <option>Average | Per 50 Possessions</option>
+                    <option>Average | Per 36 Minutes</option>
+                    <option>Average | Per 100 Possessions</option>
+                    <option>Details</option>
+                    <option>Clutch Performance</option>
+                    <option>Performance | For</option>
+                    <option>Performance | Against</option>
+                    <option>Advanced Statistics</option>
+                    <option>On Court - Off Court</option>
                 </select>
                 <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="selected2">
-                    <option>All Teams</option>
-                    <option ng-repeat="team in teams | orderBy:'Name'">{{team.Name}}</option>
+                    <option>Full Season</option>
+                    <option>Regular Season</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>Top 16</option>
+                    <option>PLayoffs</option>
+                    <option>Final Four</option>
                 </select>
                 <select class="form-control col-xs-4" id="sel3" ng-change="prikazi()" ng-model="selected3">
-                    <option>Full Season</option>
-                    <option ng-repeat="team in teams">{{team.Name}}</option>
+                    <option>All Weeks</option>
+                    <option ng-repeat="n in [].constructor(31) track by $index">
+                        Week {{ $index + 1 }}
+                    </option>
                 </select>
             </form>
         </div>

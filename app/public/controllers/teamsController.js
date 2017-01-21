@@ -1,8 +1,8 @@
 app.controller('teamsController', function($scope, $timeout, $http){
     $scope.teams = [];
-    $scope.selected1 = "Average - Per Game";
-    $scope.selected2 = "All Teams";
-    $scope.selected3 = "Full Season";
+    $scope.selected1 = "Average | Per Game";
+    $scope.selected2 = "Full Season";
+    $scope.selected3 = "All Weeks";
 
     $scope.propertyName = 'Name';
     $scope.reverse = true;

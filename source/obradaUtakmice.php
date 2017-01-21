@@ -6,12 +6,13 @@
  * Time: 15:17
  */
 
-include("c:/xampp/htdocs/PWEB-kosarkaskaStatistika/domProba.php");
-//include("../sredjenoPoTimovima.php");
+include("c:/xampp/htdocs/BasketStatistic/PWEB-kosarkaskaStatistika/domProba.php");
 
 function obradiTimskuStatistiku($boxscore, $gameCode, $season, $idTeam, $i, $conn){
     $t = $boxscore->tts[$i]->totr;
     $p = $boxscore->tts[$i]->tmr;
+
+    //var_dump($p);
 
     $query = "replace into TeamStats(gameCode, season, teamId, POS, PTS, 2FGM, 2FGA, 3FGM, 3FGA, FTM, FTA, OR2, DR, ASS, STL, TO2, BLK, BLKA, CM, RV)
 values($gameCode, $season, '$idTeam', 0, $t->puntos, $t->fgm2, $t->fga2, $t->fgm3, $t->fga3, $t->ftm, $t->fta, $t->o + $p->o, $t->d + $p->d, $t->as2, $t->st, $t->to2 + $p->to2, $t->fv, $t->ag, $t->cm, $t->rv)";
@@ -165,7 +166,7 @@ else
 
 $asdf = $conn->query("select min(gameCode) from PreostaleUtakmice");
 $najmanjaTekma = $asdf->fetch_row()[0];
-for($i = $najmanjaTekma; $i < $najmanjaTekma + 1; $i++) {
+for($i = 1; $i < 25 + 1; $i++) {
     $rez = $conn->query("select * from PreostaleUtakmice where gameCode=$i");
     if ($rez->num_rows == 1) {
         obradiUtakmicu($i, 2016, $conn);

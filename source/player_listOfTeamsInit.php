@@ -24,7 +24,7 @@ $url_params = explode("/",$_SERVER['PATH_INFO']);
  //Implementirati metodu koja dohvata sve reci iz leksikona
 // if($method == 'GET' && $table == 'players') //&& count($url_params) == 4)
 // {
-     file_put_contents("log.txt", "4 parametra");
+     //file_put_contents("log.txt", "4 parametra");
      $sql = "SELECT idTeam, teamName FROM Team";
      $result = mysqli_query($link,$sql);
      $json = array();
