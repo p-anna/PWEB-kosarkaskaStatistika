@@ -41,7 +41,7 @@ DROP TABLE IF EXISTS `mydb`.`Team` ;
 CREATE TABLE IF NOT EXISTS `mydb`.`Team` (
   `idTeam` VARCHAR(10) NOT NULL,
   `country` VARCHAR(30) NULL,
-  `teamName` VARCHAR(30) NULL,
+  `teamName` VARCHAR(35) NULL,
   PRIMARY KEY (`idTeam`),
   UNIQUE INDEX `idTeam_UNIQUE` (`idTeam` ASC))
 ENGINE = InnoDB;
@@ -79,7 +79,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Game` (
   `coachH` VARCHAR(30) NULL,
   `coachA` VARCHAR(30) NULL,
   `stadium` VARCHAR(45) NULL,
-  `city` VARCHAR(12) NULL,
   `attendance` INT NULL,
   PRIMARY KEY (`gameCode`, `season`),
   INDEX `fk_Game_TeamH_idx` (`teamH` ASC),
@@ -142,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`TeamStats` (
   `BLKA` INT NOT NULL DEFAULT 0,
   `CM` INT NOT NULL DEFAULT 0,
   `RV` INT NOT NULL DEFAULT 0,
-  PRIMARY KEY (`gameCode`, `season`),
+  PRIMARY KEY (`gameCode`, `season`, `teamId`),
   INDEX `fk_TeamStats_Team_idx` (`teamId` ASC),
   CONSTRAINT `fk_TeamStats_Game`
     FOREIGN KEY (`gameCode` , `season`)
@@ -184,8 +183,23 @@ CREATE TABLE IF NOT EXISTS `mydb`.`PlayerStats` (
   `BLGA` INT NOT NULL DEFAULT 0,
   `CM` INT NOT NULL DEFAULT 0,
   `RV` INT NOT NULL DEFAULT 0,
-  `PLUSMINUS` INT NOT NULL,
   `POSS` INT NOT NULL,
+  `teamPoints` INT NULL DEFAULT 0,
+  `teamOppPoints` INT NULL DEFAULT 0,
+  `teamOffReb` INT NULL DEFAULT 0,
+  `teamOppOffReb` INT NULL DEFAULT 0,
+  `teamDefReb` INT NULL DEFAULT 0,
+  `teamOppDefReb` INT NULL DEFAULT 0,
+  `teamSteal` INT NULL DEFAULT 0,
+  `teamOppSteal` INT NULL DEFAULT 0,
+  `teamRej` INT NULL DEFAULT 0,
+  `teamOppRej` INT NULL DEFAULT 0,
+  `teamBlock` INT NULL DEFAULT 0,
+  `teamOppBlock` INT NULL DEFAULT 0,
+  `teamFoul` INT NULL DEFAULT 0,
+  `teamOppFoul` INT NULL DEFAULT 0,
+  `teamFoulDrawn` INT NULL DEFAULT 0,
+  `teamOppFaulDrawn` INT NULL DEFAULT 0,
   INDEX `fk_PlayerStats_Player_idx` (`playerId` ASC),
   INDEX `fk_PlayerStats_Team_idx` (`teamId` ASC),
   INDEX `fk_PlayerStats_Game_idx` (`gameCode` ASC, `season` ASC),
@@ -217,8 +231,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Assists` (
   `player1Id` VARCHAR(10) NOT NULL,
   `player2Id` VARCHAR(10) NOT NULL,
   `counter` INT NULL DEFAULT 0,
-  `sezona` INT NULL,
-  PRIMARY KEY (`player1Id`, `player2Id`),
+  `sezona` INT NOT NULL,
+  PRIMARY KEY (`player1Id`, `player2Id`, `sezona`),
   INDEX `fk_Assists_Player2_idx` (`player2Id` ASC),
   CONSTRAINT `fk_Assists_Player1`
     FOREIGN KEY (`player1Id`)
