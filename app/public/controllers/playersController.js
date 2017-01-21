@@ -20,7 +20,7 @@ app.controller('playersController', function($scope, $timeout, $http){
         alert("Ovo je izabran: " + $scope.selected1 + $scope.selected2 + $scope.selected3);
 
 
-        $http.get("http:/BasketStatistic/PWEB-kosarkaskaStatistika/source/primercic.php")///players/" + $scope.selected1 + "/" + $scope.selected2 + "/" + $scope.selected3)
+        $http.get("../../source/primercic.php")///players/" + $scope.selected1 + "/" + $scope.selected2 + "/" + $scope.selected3)
             .then(function(response){
                 $scope.players = response.data;
 
@@ -35,9 +35,9 @@ app.controller('playersController', function($scope, $timeout, $http){
          .then(function(response) {
          $scope.players = response.data.players;
          });*/
-        $http.get("data/teams.json")
+        $http.get("../../source/player_listOfTeamsInit.php")
             .then(function(response) {
-                $scope.teams = response.data.teams;
+                $scope.teams = response.data;
             });
     }
 });

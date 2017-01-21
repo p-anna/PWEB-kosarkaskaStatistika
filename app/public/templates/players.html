@@ -13,11 +13,11 @@
                 </select>
                 <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="selected2">
                     <option>All Teams</option>
-                    <option ng-repeat="team in teams | orderBy:'Name'" >{{team.Name}}</option>
+                    <option ng-repeat="team in teams | orderBy:'Name'" >{{team.teamName}}</option>
                 </select>
                 <select class="form-control col-xs-4" id="sel3" ng-change="prikazi()" ng-model="selected3">
                     <option>Full Season</option>
-                    <option ng-repeat="team in teams">{{team.Name}}</option>
+                    <option ng-repeat="team in teams">{{team.teamName}}</option>
                 </select>
             </form>
         </div>
@@ -34,7 +34,7 @@
                     </th>
                     <th>
                         <button ng-click="sortBy('playerHeight')">Height</button>
-                        <span class="sortorder" ng-show="propertyName === 'playerHeight'" ng-class="{reverse: reverse}"></span>
+                        <span class="sortorder" ng-show="propertyName === 'height'" ng-class="{reverse: reverse}"></span>
                     </th>
                     <th>
                         <button ng-click="sortBy('nationality')">Nationality</button>
