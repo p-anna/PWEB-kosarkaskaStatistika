@@ -4,7 +4,7 @@
         <hr>
         <div class="container">
             <form>
-                <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="selected1">
+                <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="statisticType">
                     <option>Accumulated Statistics</option>
                     <option>Average | Per Game</option>
                     <option>Average | Per 28 Minutes</option>
@@ -18,7 +18,7 @@
                     <option>Advanced Statistics</option>
                     <option>On Court - Off Court</option>
                 </select>
-                <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="selected2">
+                <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="seasonPart">
                     <option>Full Season</option>
                     <option>Regular Season</option>
                     <option>October</option>
@@ -33,7 +33,7 @@
                     <option>PLayoffs</option>
                     <option>Final Four</option>
                 </select>
-                <select class="form-control col-xs-4" id="sel3" ng-change="prikazi()" ng-model="selected3">
+                <select class="form-control col-xs-4" id="sel3" ng-change="prikazi()" ng-model="week">
                     <option>All Weeks</option>
                     <option ng-repeat="n in [].constructor(31) track by $index">
                         Week {{ $index + 1 }}

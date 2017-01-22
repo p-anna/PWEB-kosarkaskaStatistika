@@ -23,7 +23,7 @@ app.controller('playersController', function($scope, $timeout, $http){
 
     // $scope.prikazi = function(){
             /* priprema parametara */
-            // teamID = null;
+            // var teamID = null;
             // for(t in $scope.teams){
             //     if($scope.team === t.teamName)
             //         teamID = t.idTeam;
@@ -40,6 +40,7 @@ app.controller('playersController', function($scope, $timeout, $http){
     //     }).then(function(response){
     //         $scope.players = response.data.players;
     //         $scope.headers = response.data.header;
+    //         $scope.propertyName = $scope.headers[0].nameOfProperty;
     //     });
     // };
 

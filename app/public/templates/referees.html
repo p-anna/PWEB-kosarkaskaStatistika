@@ -6,19 +6,24 @@
 
         <div class="container">
             <form>
-                <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="selected1">
-                    <option>Accumulated Statistics</option>
-                    <option>Average - Per Game</option>
-                    <option>nesto</option>
-                    <option>nesto jos</option>
-                </select>
-                <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="selected2">
+                <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="team">
                     <option>All Teams</option>
-                    <option ng-repeat="team in teams | orderBy:'Name'">{{team.Name}}</option>
+                    <option ng-repeat="team in teams | orderBy:'Name'">{{team.teamName}}</option>
                 </select>
-                <select class="form-control col-xs-4" id="sel3" ng-change="prikazi()" ng-model="selected3">
+                <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="seasonPart">
                     <option>Full Season</option>
-                    <option ng-repeat="team in teams">{{team.Name}}</option>
+                    <option>Regular Season</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>Top 16</option>
+                    <option>Playoffs</option>
+                    <option>Final Four</option>
                 </select>
             </form>
         </div>
@@ -36,10 +41,8 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="referee in referees | orderBy:propertyName:reverse ">
-                    <!-- Ne radi ovaj ng-show, isprobavala i nista nije proradio
-                         Iznervirala sam se pa ostavim ovako -->
                     <td ng-repeat="h in headers">
-                        <a href="#/referee/{{referee.refereeID}}" ng-show="isNameProp(h.nameOfProperty)">
+                        <a href="#/referees/{{referee.refereeID}}" ng-show="isNameProp(h.nameOfProperty)">
                             {{referee[h.nameOfProperty]}}
                         </a>
                         <span ng-show="!isNameProp(h.nameOfProperty)">
