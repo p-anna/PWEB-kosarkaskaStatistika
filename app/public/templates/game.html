@@ -1,0 +1,101 @@
+<div id="wrapper">
+
+    <div id="page-wrapper">
+        <h2>Game</h2>
+        <hr>
+        <div class="container">
+            <form>
+                <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="statisticType">
+                    <option>Accumulated Statistics</option>
+                    <option>Average | Per Game</option>
+                    <option>Average | Per 28 Minutes</option>
+                    <option>Average | Per 50 Possessions</option>
+                    <option>Average | Per 36 Minutes</option>
+                    <option>Average | Per 100 Possessions</option>
+                    <option>Details</option>
+                    <option>Clutch Performance</option>
+                    <option>Performance | For</option>
+                    <option>Performance | Against</option>
+                    <option>Advanced Statistics</option>
+                    <option>On Court - Off Court</option>
+                </select>
+            </form>
+        </div>
+        <br>
+        <div align="center"><img class="animated infinite bounce" src="img/ball.png" height="50" width="50" ng-show = "loading"></div>
+        <div align="center" ng-show = "loading">Loading...</div>
+
+        <a href="#/teams/{{teams[0].teamID}}" class="velikiLink">{{teams[0].teamName}}</a>
+        <div class="container">
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th ng-repeat="h in headers">
+                        <button class='propDugme' ng-click="sortBy(h.nameOfProperty)">{{h.name}}</button>
+                        <span class="sortorder" ng-show="propertyName === h.nameOfProperty" ng-class="{reverse: reverse}"></span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="p in team1 | orderBy:propertyName:reverse">
+                    <td ng-repeat="h in headers">
+                        <a href="#/players/{{p.playerID}}" ng-show="isNameProp(h.nameOfProperty)">
+                            {{p[h.nameOfProperty]}}
+                        </a>
+                        <span ng-hide="isNameProp(h.nameOfProperty)">
+                            {{p[h.nameOfProperty]}}
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-repeat="h in headers">
+                        {{team1Percents[h.nameOfProperty]}}
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-repeat="h in headers">
+                        {{team1Total[h.nameOfProperty]}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <br>
+        <a href="#/teams/{{teams[1].teamID}}" class="velikiLink">{{teams[1].teamName}}</a>
+        <div class="container">
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th ng-repeat="h in headers">
+                        <button class='propDugme' ng-click="sortBy(h.nameOfProperty)">{{h.name}}</button>
+                        <span class="sortorder" ng-show="propertyName === h.nameOfProperty" ng-class="{reverse: reverse}"></span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="p in team2 | orderBy:propertyName:reverse">
+                    <td ng-repeat="h in headers">
+                        <a href="#/players/{{p.playerID}}" ng-show="isNameProp(h.nameOfProperty)">
+                            {{p[h.nameOfProperty]}}
+                        </a>
+                        <span ng-hide="isNameProp(h.nameOfProperty)">
+                            {{p[h.nameOfProperty]}}
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-repeat="h in headers">
+                        {{team1Percents[h.nameOfProperty]}}
+                    </td>
+                </tr>
+                <tr>
+                    <td ng-repeat="h in headers">
+                        {{team1Total[h.nameOfProperty]}}
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

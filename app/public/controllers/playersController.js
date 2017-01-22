@@ -35,10 +35,11 @@ app.controller('playersController', function($scope, $timeout, $http){
             });
     }
     $scope.prikazi = function(){
+            $scope.loading = true;
         /* priprema parametara */
         var teamID = "null";
         for(var t in $scope.teams){ /*NE RADI, NE ZNAM STO*/
-            console.log($scope.team + " " + t.teamName);
+            //console.log($scope.team + " " + t.teamName);
             if($scope.team == t.teamName)
                 teamID = t.idTeam;
         }
@@ -52,11 +53,26 @@ app.controller('playersController', function($scope, $timeout, $http){
             method: "GET",
             params: {statisticType: $scope.statisticType, idTeam: teamID, position: position,
                 seasonPart: season, week: week}
-        }).then(function(response){
-            $scope.players = response.data.players;
-            $scope.headers = response.data.header;
-            $scope.propertyName = $scope.headers[0].nameOfProperty;
-        });
+            })
+            .then(function(response){
+                $scope.players = response.data.players;
+                $scope.headers = response.data.header;
+                $scope.propertyName = $scope.headers[0].nameOfProperty;
+            })
+            .finally(function () {
+                $scope.loading = false;
+            });
+    };
+
+    init();
+
+    function init() {
+        $scope.prikazi();
+        $http.get("../../source/player_listOfTeamsInit.php")
+            .then(function(response) {
+                $scope.teams = response.data;
+            });
+
     }
 
     $scope.isNameProp = function (propName) {

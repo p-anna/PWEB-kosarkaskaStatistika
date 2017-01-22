@@ -29,5 +29,13 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when('/referees/:id', {
             templateUrl: "templates/referee.html",
             controller: 'refereeController'
+        })
+        .when('/games/:id', {
+        templateUrl: "templates/game.html",
+        controller: 'gameController'
+        })
+        .when('/teams/:id', {
+            templateUrl: "templates/team.html",
+            controller: 'teamController'
         });
 }]);

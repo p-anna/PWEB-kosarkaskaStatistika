@@ -6,16 +6,28 @@
  * Time: 15:17
  */
 
-include("c:/xampp/htdocs/BasketStatistic/PWEB-kosarkaskaStatistika/domProba.php");
+include("C:/xampp/htdocs/PWEB-kosarkaskaStatistika/domProba.php");
+//include("../sredjenoPoTimovima.php");
+//include("c:/xampp/htdocs/BasketStatistic/PWEB-kosarkaskaStatistika/domProba.php");
 
 function obradiTimskuStatistiku($boxscore, $gameCode, $season, $idTeam, $i, $conn){
     $t = $boxscore->tts[$i]->totr;
     $p = $boxscore->tts[$i]->tmr;
 
+    $oppT = $boxscore->tts[$i == 0 ? 1 : 0]->totr;
+    $oppP = $boxscore->tts[$i == 0 ? 1 : 0]->totr;
+
     //var_dump($p);
+    $TmFGA = $t->fgm2 + $t->fgm3 + $t->fga2 + $t->fga3;
+    $oppFGA = $oppT->fgm2 + $oppT->fgm3 + $oppT->fga2 + $oppT->fga3;
+    $TmFTA = $t->fta + $t->ftm;
+    $oppFTA = $oppT->fta + $oppT->ftm;
+
+    $pos = 0.5 * (($TmFGA + 0.4 * $TmFTA - 1.07 * (($t->o+$p->o) / ($t->o + $p->o + $oppT->o + $oppP->o)) * ($TmFGA - ($t->fgm2+$t->fgm3)) + $t->to2) +
+    ($oppFGA + 0.4 * $oppFTA - 1.07 * (($oppT->o+$oppP->o) / ($oppT->o+$oppP->o + $t->d+$p->d)) * ($oppFGA - ($oppT->fgm2+$oppT->fgm3)) + $oppT->to2));
 
     $query = "replace into TeamStats(gameCode, season, teamId, POS, PTS, 2FGM, 2FGA, 3FGM, 3FGA, FTM, FTA, OR2, DR, ASS, STL, TO2, BLK, BLKA, CM, RV)
-values($gameCode, $season, '$idTeam', 0, $t->puntos, $t->fgm2, $t->fga2, $t->fgm3, $t->fga3, $t->ftm, $t->fta, $t->o + $p->o, $t->d + $p->d, $t->as2, $t->st, $t->to2 + $p->to2, $t->fv, $t->ag, $t->cm, $t->rv)";
+values($gameCode, $season, '$idTeam', $pos, $t->puntos, $t->fgm2, $t->fga2, $t->fgm3, $t->fga3, $t->ftm, $t->fta, $t->o + $p->o, $t->d + $p->d, $t->as2, $t->st, $t->to2 + $p->to2, $t->fv, $t->ag, $t->cm, $t->rv)";
     $conn->query($query);
 }
 
@@ -166,7 +178,7 @@ else
 
 $asdf = $conn->query("select min(gameCode) from PreostaleUtakmice");
 $najmanjaTekma = $asdf->fetch_row()[0];
-for($i = 1; $i < 25 + 1; $i++) {
+for($i = $najmanjaTekma; $i < $najmanjaTekma + 2; $i++) {
     $rez = $conn->query("select * from PreostaleUtakmice where gameCode=$i");
     if ($rez->num_rows == 1) {
         obradiUtakmicu($i, 2016, $conn);
@@ -324,7 +336,7 @@ function izracunajPoCetvrtini($cetvrtina, $teamA, $conn, $season, $first51, $dos
                         $idOffReboundProtivnik[$playerInFirst5]++;
                         break;
                     case "FV":
-                        $idBlockProtivnik[$playerInFirst5];
+                        $idBlockProtivnik[$playerInFirst5]++;
                         break;
                     case "AG":
                         $idShotRejectedProtivnik[$playerInFirst5]++;
@@ -501,20 +513,14 @@ function napuniNaprednu($conn, $gameCode, $season, $dosadniObjekat){
     foreach ($dosadniObjekat->idBlock as $playerid => $value)
         $conn->query("update playerStats set teamBlock= $value where playerId = '$playerid' and gameCode=$gameCode and season=$season");
     foreach ($dosadniObjekat->idShotRejected as $playerid => $value)
-        $conn->query("update playerStats set teamOppBlock = $value where playerId = '$playerid' and gameCode=$gameCode and season=$season");
+        $conn->query("update playerStats set teamShotRej = $value where playerId = '$playerid' and gameCode=$gameCode and season=$season");
     foreach ($dosadniObjekat->idFoul as $playerid => $value)
         $conn->query("update playerStats set teamFoul = $value where playerId = '$playerid' and gameCode=$gameCode and season=$season");
     foreach ($dosadniObjekat->idFoulDrawn as $playerid => $value)
-        $conn->query("update playerStats set teamDrawnFoul = $value where playerId = '$playerid' and gameCode=$gameCode and season=$season");
+        $conn->query("update playerStats set teamFoulDrawn = $value where playerId = '$playerid' and gameCode=$gameCode and season=$season");
     foreach ($dosadniObjekat->idFoulProtivnik as $playerid => $value)
         $conn->query("update playerStats set teamOppFoul = $value where playerId = '$playerid' and gameCode=$gameCode and season=$season");
     foreach ($dosadniObjekat->idFoulDrawnProtivnik as $playerid => $value)
         $conn->query("update playerStats set teamOppFaulDrawn = $value where playerId = '$playerid' and gameCode=$gameCode and season=$season");
-//    foreach ($opasanObjekat[idPoeniProtivnik] as $playerid => $value)
-//        $conn->query("update playerStats set teamOppPoints = $value where playerId = '$playerid' and gameCode=$gameCode and season=$season");
-//    foreach ($opasanObjekat[idPoeniProtivnik] as $playerid => $value)
-//        $conn->query("update playerStats set teamOppPoints = $value where playerId = '$playerid' and gameCode=$gameCode and season=$season");
-//    foreach ($opasanObjekat[idPoeniProtivnik] as $playerid => $value)
-//        $conn->query("update playerStats set teamOppPoints = $value where playerId = '$playerid' and gameCode=$gameCode and season=$season");
 
 }

@@ -25,6 +25,7 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
     init();
 
     function init() {
+        /*
         $scope.loading = true;
         $http({
             url: "../../source/primercic.php",
@@ -42,5 +43,25 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
         }).finally(function () {
             $scope.loadning = false;
         });
+            $scope.loading = false;
+        });
+        */
+        $scope.loading = true;
+        $http.get("data/game.json")
+            .then(function(response){
+                $scope.headers = response.data.header;
+                $scope.teams = response.data.teams;
+                $scope.team1 = response.data.team1;
+                $scope.team2 = response.data.team2;
+                $scope.team1Percents = response.data.team1Percents;
+                $scope.team2Percents = response.data.team2Percents;
+                $scope.team1Total = response.data.team1Total;
+                $scope.team2Total = response.data.team2Total;
+                $scope.propertyName = response.data.header[0].nameOfProperty;
+            }).finally(function () {
+                $scope.loading = false;
+            });
+
+
     }
 });
