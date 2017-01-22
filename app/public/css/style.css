@@ -64,6 +64,7 @@ ul > li > img {
 .form-control {
     width:auto;
     display:inline-block;
+    margin-right: 5px;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td,
@@ -76,6 +77,20 @@ ul > li > img {
     background-color: #fff0c2;
 }
 
+.table-striped{
+    border: solid;
+}
+
+.propDugme{
+    background-color: transparent;
+    border: transparent;
+    color: darkorange;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 2px;
+}
 .sortorder:after {
     content: '\25b2';
 }
@@ -93,4 +108,9 @@ ul > li > img {
 .img-circle {
     max-width: 100%;
     height: auto;
+}
+
+a{
+    color: #761c19;
+    font-weight: bold;
 }

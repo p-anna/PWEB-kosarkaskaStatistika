@@ -22,11 +22,11 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: "templates/games.html",
             controller: 'gamesController'
         })
-        .when('/player/:id', {
+        .when('/players/:id', {
             templateUrl: "templates/player.html",
             controller: 'playerController'
         })
-        .when('/referee/:id', {
+        .when('/referees/:id', {
             templateUrl: "templates/referee.html",
             controller: 'refereeController'
         });

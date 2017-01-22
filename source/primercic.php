@@ -26,6 +26,21 @@ if($method == 'GET' && count($url_params) == 5)
         array_push($json, mysqli_fetch_object($result));
     echo json_encode($json);
 }
+
+$table = $url_params["screen"];
+if($method == 'GET' && $table == "players" && count($url_params) == 2)
+{
+    $id = $url_params["id"];
+    file_put_contents("log.txt", $id);
+    $sql = "SELECT * FROM player WHERE idPlayer = '$id'";
+    $result = mysqli_query($link,$sql);
+
+    $json = array();
+    for($i=0; $i<mysqli_num_rows($result);$i++)
+        array_push($json, mysqli_fetch_object($result));
+    echo json_encode($json);
+}
+
 //Metoda koja dohvata samo jednu rec iz leksikona vraca objekat koji sadrzi rec i njen skor ili false ako se trazena rec ne nalazi u leksikonu
 if($method == 'GET' && count($url_params) == 3)
 {
@@ -49,14 +64,42 @@ elseif($method == 'POST' && $table == 'documents')
     //$sql = "INSERT INTO documents(id,title,content,sentment) VALUES(null,'$title','$content','$score')";
 }
 
-$sql = "select playerName as '2ft/54' from Player";
+$sql = "select idPlayer, playerName, height, nationality from Player";
 $result = mysqli_query($link,$sql);
 
 if(!$result)
 {
     printf("SQL ERROR: %s\n", mysqli_error($link));
 }
-//
+
+if($method == 'GET')
+{
+//    echo '[';
+//    for($i=0; $i<mysqli_num_rows($result);$i++)
+//        echo ($i>0?',':'').json_encode(mysqli_fetch_object($result));
+//    echo ']';
+
+    echo "[]";
+    exit(0);
+      $poruka = new stdClass();
+      $json = array();
+      for($i=0; $i<mysqli_num_rows($result);$i++)
+          array_push($json, mysqli_fetch_object($result));
+      $poruka->players = $json;
+    $textHedera= '[
+                        {"name" : "NAME", "propertyName" : "playerName"},
+                        {"name" : "Height", "propertyName" : "height"}
+                   ]';
+    //$poruka->players[0]->playerName = '<pre><a href="#/player/{{player.idPlayer}}"></a>'. $poruka->players[0]->playerName . '</a></pre>';
+    $poruka->headers = json_decode($textHedera);
+    echo json_encode($poruka);
+}
+elseif($method == 'POST')
+{
+    echo "Data successfully inserted!";
+}
+
+
 //if($method == 'GET')
 //{
 ////    echo '[';

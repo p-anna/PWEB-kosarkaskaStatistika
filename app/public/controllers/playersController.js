@@ -13,6 +13,8 @@ app.controller('playersController', function($scope, $timeout, $http){
     $scope.propertyName = '';
     $scope.reverse = true;
 
+    $scope.loading = false;
+
     $scope.sortBy = function(propertyName) {
         $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
         $scope.propertyName = propertyName;
@@ -20,47 +22,48 @@ app.controller('playersController', function($scope, $timeout, $http){
 
 
     $scope.prikazi = function(){
-        /*$http({
-            url: "../../source/primercic.php",
+            /* priprema parametara */
+            var teamID = "null";
+            for(t in $scope.teams){
+                if($scope.team === t.teamName)
+                    teamID = t.idTeam;
+            }
+            var position = $scope.position === "All Positions" ? "null" : $scope.position;
+            var season = $scope.seasonPart === "Full Season" ? "null" : $scope.seasonPart;
+            var week = $scope.week === "All Weeks" ? "null" : $scope.week;
+
+        $http({
+            url: "../../source/players.php",
             method: "GET",
-            params: {statisticType: $scope.statisticType, team: $scope.team, position: $scope.position,
-                seasonPart: $scope.seasonPart, week: $scope.week}
+            params: {statisticType: $scope.statisticType, idTeam: teamID, position: position,
+                seasonPart: season, week: week}
         }).then(function(response){
             $scope.players = response.data.players;
             $scope.headers = response.data.header;
-        });*/
-    };
-
-    $scope.isNameProp = function (propName) {
-        if(propName.contains("Name") || propName.contains("name"))
-            return false;
-        else
-            return true;
+            $scope.propertyName = $scope.headers[0].nameOfProperty;
+        });
     };
 
     init();
 
     function init() {
-        $http.get("data/players.json")
-            .then(function (response) {
-            $scope.players = response.data.players;
-            $scope.headers = response.data.header;
-            $scope.propertyName = $scope.headers[0].nameOfProperty;
-        });
-
-        $http.get("data/teams.json")
-            .then(function (response) {
-                $scope.teams = response.data.teams;
-            });
-
-
-        /*
+        $scope.prikazi();
         $http.get("../../source/player_listOfTeamsInit.php")
             .then(function(response) {
                 $scope.teams = response.data;
             });
-            */
+
     }
+
+    $scope.isNameProp = function (propName) {
+
+        if(propName === "playerName"){
+            return true;
+        }
+        else{
+            return false;
+        }
+    };
 
 
 });
