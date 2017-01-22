@@ -2,6 +2,7 @@ app.controller('gamesController', function($scope, $timeout, $http){
 
     $scope.games = [];
     $scope.headers = [];
+    $scope.teams = [];
 
     $scope.team = "All Teams";
     $scope.seasonPart = "Full Season";
@@ -44,7 +45,10 @@ app.controller('gamesController', function($scope, $timeout, $http){
     function init() {
 
         $scope.prikazi();
-        /* mozda ce trebati jos nesto u init, pa neka ostane za sad*/
+        $http.get("../../source/player_listOfTeamsInit.php")
+            .then(function(response) {
+                $scope.teams = response.data;
+            });
     };
 
     $scope.isNameProp = function (propName) {

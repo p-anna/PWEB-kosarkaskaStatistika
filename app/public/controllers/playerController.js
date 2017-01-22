@@ -14,8 +14,8 @@ app.controller('playerController', function($scope, $timeout, $http, $routeParam
             method: "GET",
             params: {screen: "players", id: $routeParams.id}
         }).then(function(response){
-            $scope.player = response.data.player;
-            $scope.headers = response.data.header;
+            $scope.player = response.data[0];
+            //$scope.headers = response.data.header;
         });
     }
 });
