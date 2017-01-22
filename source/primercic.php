@@ -42,7 +42,7 @@ elseif($method == 'POST' && $table == 'documents')
     //$sql = "INSERT INTO documents(id,title,content,sentment) VALUES(null,'$title','$content','$score')";
 }
 
-$sql = "select playerName as '2ft/54' from Player";
+$sql = "select idPlayer, playerName, height, nationality from Player";
 $result = mysqli_query($link,$sql);
 
 if(!$result)
@@ -57,11 +57,18 @@ if($method == 'GET')
 //        echo ($i>0?',':'').json_encode(mysqli_fetch_object($result));
 //    echo ']';
 
+      $poruka = new stdClass();
       $json = array();
       for($i=0; $i<mysqli_num_rows($result);$i++)
           array_push($json, mysqli_fetch_object($result));
-      echo json_encode($json);
-
+      $poruka->players = $json;
+    $textHedera= '[
+                        {"name" : "NAME", "propertyName" : "playerName"},
+                        {"name" : "Height", "propertyName" : "height"}
+                   ]';
+    //$poruka->players[0]->playerName = '<pre><a href="#/player/{{player.idPlayer}}"></a>'. $poruka->players[0]->playerName . '</a></pre>';
+    $poruka->headers = json_decode($textHedera);
+    echo json_encode($poruka);
 }
 elseif($method == 'POST')
 {
