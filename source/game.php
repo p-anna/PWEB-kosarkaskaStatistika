@@ -16,11 +16,11 @@ if(mysqli_connect_errno())
 
 $filter = "where true";
 $header = array();
-//$gameCode=$_GET['gameCode'];
-$gameCode = 1;
+$gameCode=$_GET['gameCode'];
+//$gameCode = 1;
 
-//$season=$_GET['season'];
-$season = 2016;
+$season=$_GET['season'];
+//$season = 2016;
 
 
 $h0 = new stdClass(); $h0->name="Name"; $h0->nameOfProperty="playerName";
