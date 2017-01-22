@@ -7,15 +7,7 @@
  */
 
 
-error_reporting(0);
-$method = $_SERVER['REQUEST_METHOD'];
-$url = $_SERVER['REQUEST_URI'];
-$query_str = parse_url($url, PHP_URL_QUERY);
-parse_str($query_str, $url_params);
-file_put_contents("log.txt", $url_params);
-
-$link = mysqli_connect('localhost','root','root','mydb');
-mysqli_set_charset($link,'utf8');
+$conn = mysqli_connect('localhost','root','root','mydb');
 
 if(mysqli_connect_errno())
 {
@@ -41,11 +33,8 @@ if($a != 'null'){
     $filter = $filter . " and ts.season = $a";
 }
 
-$c=$_GET['teamId'];
-if($c==null)
-    exit();
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1 /// izmeni samo ono koji je tim u pitanju ALLOOO
-////
+$c = $_GET['teamId'];
+
 
 
 $sql = "select distinct if(ts.teamId = (select teamH from Game g where g.gameCode = ts.gameCode and ts.season = g.season), 'H', 'A') as HOME, t2.teamName as ATeam, ts.PTS as PTS ";
@@ -63,6 +52,7 @@ $sql = $sql.$sqlnew;
 $sqlnew = " $filter ";
 $sql = $sql.$sqlnew;
 
+$header = array();
 $h0 = new stdClass(); $h0->name="H/A"; $h0->nameOfProperty="HOME";
 array_push($header, $h0);
 $h1 = new stdClass(); $h1->name="Name"; $h1->nameOfProperty="ATeam";
@@ -108,36 +98,36 @@ $h18 = new stdClass(); $h18->name="CM"; $h18->nameOfProperty="CM";
 array_push($header, $h18);
 $h19 = new stdClass(); $h19->name="RV"; $h19->nameOfProperty="RV";
 array_push($header, $h19);
+//
+//
+//echo $sql;
+//echo "\n";
+//
 
 
-echo $sql;
-echo "\n";
+//
+//$result = mysqli_query($link,$sql);
+//$json = array();
+//for($i=0; $i<mysqli_num_rows($result);$i++) {
+//    //$t = mysqli_fetch_object($result);
+//    array_push($json, mysqli_fetch_object($result));
+//    //echo $t;
+//}
+//echo json_encode($json);
 
-
-
-
-$result = mysqli_query($link,$sql);
-$json = array();
-for($i=0; $i<mysqli_num_rows($result);$i++) {
-    //$t = mysqli_fetch_object($result);
-    array_push($json, mysqli_fetch_object($result));
-    //echo $t;
-}
-echo json_encode($json);
-
-/*
-$header = array();
 $poruka = new stdClass();
 $poruka->header = $header;
 $tabela = array();
-//echo var_dump($sql);
+
 $rez = $conn->query($sql);
-//echo var_dump($rez);
+
+//echo var_dump($sql);
+//*echo var_dump($rez);
 //exit(0);
+
 $i = 0;
 for($i = 0; $i < $rez->num_rows; $i++){
     array_push($tabela, $rez->fetch_assoc());
 }
 $poruka->players = $tabela;
 echo json_encode($poruka);
-*/
