@@ -1,4 +1,10 @@
-{
+{ "header" : [
+    {"headerText" : "Name", "nameOfProperty" : "playerName"},
+    {"headerText" : "Height", "nameOfProperty" : "playerHeight"},
+    {"headerText" : "Photo", "nameOfProperty" : "photoURL"},
+    {"headerText" : "Nationality", "nameOfProperty" : "nationality"}
+  ]
+  ,
   "players": [
     {
       "playerID": 1,
