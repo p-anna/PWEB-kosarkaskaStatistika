@@ -56,7 +56,6 @@ if(!$result)
 {
     printf("SQL ERROR: %s\n", mysqli_error($link));
 }
-<<<<<<< HEAD
 
 if($method == 'GET')
 {
@@ -65,6 +64,8 @@ if($method == 'GET')
 //        echo ($i>0?',':'').json_encode(mysqli_fetch_object($result));
 //    echo ']';
 
+    echo "[]";
+    exit(0);
       $poruka = new stdClass();
       $json = array();
       for($i=0; $i<mysqli_num_rows($result);$i++)
@@ -83,8 +84,7 @@ elseif($method == 'POST')
     echo "Data successfully inserted!";
 }
 
-=======
-//
+
 //if($method == 'GET')
 //{
 ////    echo '[';
@@ -103,6 +103,5 @@ elseif($method == 'POST')
 //    echo "Data successfully inserted!";
 //}
 //
->>>>>>> afdcb3dfd16e12f9da67eeb5ecefe5961a6d411f
 
 mysqli_close($link);
