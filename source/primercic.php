@@ -26,6 +26,21 @@ if($method == 'GET' && count($url_params) == 5)
         array_push($json, mysqli_fetch_object($result));
     echo json_encode($json);
 }
+
+$table = $url_params["screen"];
+if($method == 'GET' && $table == "players" && count($url_params) == 2)
+{
+    $id = $url_params["id"];
+    file_put_contents("log.txt", $id);
+    $sql = "SELECT * FROM player WHERE idPlayer = '$id'";
+    $result = mysqli_query($link,$sql);
+
+    $json = array();
+    for($i=0; $i<mysqli_num_rows($result);$i++)
+        array_push($json, mysqli_fetch_object($result));
+    echo json_encode($json);
+}
+
 //Metoda koja dohvata samo jednu rec iz leksikona vraca objekat koji sadrzi rec i njen skor ili false ako se trazena rec ne nalazi u leksikonu
 if($method == 'GET' && count($url_params) == 3)
 {

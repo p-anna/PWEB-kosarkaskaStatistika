@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9ac2cc96-ecba-4d19-bd81-f63e22f49982" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/app.js" afterPath="$PROJECT_DIR$/app/public/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/controllers/playerController.js" afterPath="$PROJECT_DIR$/app/public/controllers/playerController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/controllers/playersController.js" afterPath="$PROJECT_DIR$/app/public/controllers/playersController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/data/players.json" afterPath="$PROJECT_DIR$/app/public/data/players.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/index.html" afterPath="$PROJECT_DIR$/app/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/templates/players.html" afterPath="$PROJECT_DIR$/app/public/templates/players.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/templates/teams.html" afterPath="$PROJECT_DIR$/app/public/templates/teams.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/log.txt" afterPath="$PROJECT_DIR$/source/log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/source/primercic.php" afterPath="$PROJECT_DIR$/source/primercic.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="primercic.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/primercic.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+              <folding>
+                <marker date="1485083769837" expanded="true" signature="556:576" ph="SELECT * FRO... Player" />
+                <marker date="1485083769837" expanded="true" signature="962:1000" ph="SELECT * FRO... Player" />
+                <marker date="1485083769837" expanded="true" signature="962:1004" ph="SELECT * FRO... player" />
+                <marker date="1485083769837" expanded="true" signature="962:1005" ph="SELECT * FRO... player" />
+                <marker date="1485083769837" expanded="true" signature="1489:1509" ph="SELECT * FRO... Player" />
+                <marker date="1485083769837" expanded="true" signature="2118:2159" ph="select playe... Player" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/log.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/templates/player.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playerController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/controllers/playerController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playersController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/controllers/playersController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1071">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="players.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/public/templates/players.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="21" column="100" lean-forward="false" selection-start-line="21" selection-start-column="100" selection-end-line="21" selection-end-column="100" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player_listOfTeamsInit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/player_listOfTeamsInit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+              <folding>
+                <marker date="1485024182098" expanded="true" signature="665:698" ph="SELECT idTea... Team" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teams.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/templates/teams.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="733">
+              <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="primercic1.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/primercic1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding>
+                <marker date="1485084451264" expanded="true" signature="556:576" ph="SELECT * FRO... Player" />
+                <marker date="1485084451264" expanded="true" signature="1058:1078" ph="SELECT * FRO... Player" />
+                <marker date="1485084451264" expanded="true" signature="1687:1747" ph="select idPla... Player" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/public/data/player.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>alert</find>
+      <find>4 parametra</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/source/player_listOfTeamsInit.php" />
+        <option value="$PROJECT_DIR$/app/public/controllers/teamsController.js" />
+        <option value="$PROJECT_DIR$/source/obradaUtakmice.php" />
+        <option value="$PROJECT_DIR$/app/public/templates/players.html" />
+        <option value="$PROJECT_DIR$/app/public/index.html" />
+        <option value="$PROJECT_DIR$/app/public/controllers/playersController.js" />
+        <option value="$PROJECT_DIR$/app/public/data/players.json" />
+        <option value="$PROJECT_DIR$/app/public/app.js" />
+        <option value="$PROJECT_DIR$/source/log.txt" />
+        <option value="$PROJECT_DIR$/app/public/controllers/playerController.js" />
+        <option value="$PROJECT_DIR$/source/primercic.php" />
+        <option value="$PROJECT_DIR$/app/public/templates/teams.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/app/public/bower_components/bootstrap/node_modules" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP from xampp" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PWEB-kosarkaskaStatistika" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RunManager" selected="PHP Script.obradaUtakmice.php">
+    <configuration default="false" name="obradaUtakmice.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/source/obradaUtakmice.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="obradaUtakmice.php (1)" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/obradaUtakmice.php">
+      <method />
+    </configuration>
+    <configuration default="false" name="primercic.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/source/primercic.php">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.obradaUtakmice.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.obradaUtakmice.php (1)" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.primercic.php" />
+    </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.obradaUtakmice.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHP Script.primercic.php" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.obradaUtakmice.php (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ac2cc96-ecba-4d19-bd81-f63e22f49982" name="Default" comment="" />
+      <created>1484431408948</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1484431408948</updated>
+      <workItem from="1484431410657" duration="2508000" />
+      <workItem from="1484507094350" duration="1481000" />
+      <workItem from="1485001602977" duration="18878000" />
+      <workItem from="1485077832114" duration="8166000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="31033000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28706625" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/source/primercic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1485083769837" expanded="true" signature="556:576" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="962:1000" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="962:1004" ph="SELECT * FRO... player" />
+            <marker date="1485083769837" expanded="true" signature="962:1005" ph="SELECT * FRO... player" />
+            <marker date="1485083769837" expanded="true" signature="1489:1509" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="2118:2159" ph="select playe... Player" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/obradaUtakmice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2890">
+          <caret line="170" column="28" lean-forward="true" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
+          <folding>
+            <marker date="1485035430804" expanded="true" signature="930:985" ph="select idPla... Player" />
+            <marker date="1485035430804" expanded="true" signature="1188:1398" ph="insert into Player... " />
+            <marker date="1485035430804" expanded="true" signature="1445:1797" ph="insert into PlayerStats... " />
+            <marker date="1485035430804" expanded="true" signature="2464:2509" ph="delete from " />
+            <marker date="1485035430804" expanded="true" signature="4689:4738" ph="select * fro... Referee" />
+            <marker date="1485035430804" expanded="true" signature="4832:4872" ph="select max(i... Referee" />
+            <marker date="1485035430804" expanded="true" signature="5147:5242" ph="INSERT INTO Referee... " />
+            <marker date="1485035430804" expanded="true" signature="5427:5486" ph="select idRef... Referee" />
+            <marker date="1485035430804" expanded="true" signature="5612:5654" ph="select * fro... Team" />
+            <marker date="1485035430804" expanded="true" signature="5740:5802" ph="INSERT INTO Team... " />
+            <marker date="1485035430804" expanded="true" signature="6271:6314" ph="select min(g... PreostaleUtakmice" />
+            <marker date="1485035430804" expanded="true" signature="6416:6463" ph="select * fro... PreostaleUtakmice" />
+            <marker date="1485035430804" expanded="true" signature="8596:8760" ph="insert into assists... " />
+            <marker date="1485035430804" expanded="true" signature="19512:19621" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="19715:19834" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="19929:20050" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20145:20266" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20364:20470" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20579:20688" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20788:20894" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21003:21112" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21207:21312" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21416:21524" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21619:21723" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21825:21933" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22027:22131" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22230:22339" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22442:22549" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22657:22769" ph="update playe... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/templates/players.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="100" lean-forward="false" selection-start-line="48" selection-start-column="100" selection-end-line="48" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/controllers/playersController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/player_listOfTeamsInit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <marker date="1485024182098" expanded="true" signature="665:698" ph="SELECT idTea... Team" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/templates/teams.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/controllers/teamsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/primercic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1485083769837" expanded="true" signature="556:576" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="962:1000" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="962:1004" ph="SELECT * FRO... player" />
+            <marker date="1485083769837" expanded="true" signature="962:1005" ph="SELECT * FRO... player" />
+            <marker date="1485083769837" expanded="true" signature="1489:1509" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="2118:2159" ph="select playe... Player" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/obradaUtakmice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1485035430804" expanded="true" signature="930:985" ph="select idPla... Player" />
+            <marker date="1485035430804" expanded="true" signature="1188:1398" ph="insert into Player... " />
+            <marker date="1485035430804" expanded="true" signature="1445:1797" ph="insert into PlayerStats... " />
+            <marker date="1485035430804" expanded="true" signature="2464:2509" ph="delete from " />
+            <marker date="1485035430804" expanded="true" signature="4689:4738" ph="select * fro... Referee" />
+            <marker date="1485035430804" expanded="true" signature="4832:4872" ph="select max(i... Referee" />
+            <marker date="1485035430804" expanded="true" signature="5147:5242" ph="INSERT INTO Referee... " />
+            <marker date="1485035430804" expanded="true" signature="5427:5486" ph="select idRef... Referee" />
+            <marker date="1485035430804" expanded="true" signature="5612:5654" ph="select * fro... Team" />
+            <marker date="1485035430804" expanded="true" signature="5740:5802" ph="INSERT INTO Team... " />
+            <marker date="1485035430804" expanded="true" signature="6271:6314" ph="select min(g... PreostaleUtakmice" />
+            <marker date="1485035430804" expanded="true" signature="6416:6463" ph="select * fro... PreostaleUtakmice" />
+            <marker date="1485035430804" expanded="true" signature="8596:8760" ph="insert into assists... " />
+            <marker date="1485035430804" expanded="true" signature="19512:19621" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="19715:19834" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="19929:20050" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20145:20266" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20364:20470" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20579:20688" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20788:20894" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21003:21112" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21207:21312" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21416:21524" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21619:21723" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21825:21933" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22027:22131" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22230:22339" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22442:22549" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22657:22769" ph="update playe... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/templates/players.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/controllers/playersController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/primercic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <marker date="1485083769837" expanded="true" signature="556:576" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="962:1000" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="962:1004" ph="SELECT * FRO... player" />
+            <marker date="1485083769837" expanded="true" signature="962:1005" ph="SELECT * FRO... player" />
+            <marker date="1485083769837" expanded="true" signature="1489:1509" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="2118:2159" ph="select playe... Player" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/obradaUtakmice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1485035430804" expanded="true" signature="930:985" ph="select idPla... Player" />
+            <marker date="1485035430804" expanded="true" signature="1188:1398" ph="insert into Player... " />
+            <marker date="1485035430804" expanded="true" signature="1445:1797" ph="insert into PlayerStats... " />
+            <marker date="1485035430804" expanded="true" signature="2464:2509" ph="delete from " />
+            <marker date="1485035430804" expanded="true" signature="4689:4738" ph="select * fro... Referee" />
+            <marker date="1485035430804" expanded="true" signature="4832:4872" ph="select max(i... Referee" />
+            <marker date="1485035430804" expanded="true" signature="5147:5242" ph="INSERT INTO Referee... " />
+            <marker date="1485035430804" expanded="true" signature="5427:5486" ph="select idRef... Referee" />
+            <marker date="1485035430804" expanded="true" signature="5612:5654" ph="select * fro... Team" />
+            <marker date="1485035430804" expanded="true" signature="5740:5802" ph="INSERT INTO Team... " />
+            <marker date="1485035430804" expanded="true" signature="6271:6314" ph="select min(g... PreostaleUtakmice" />
+            <marker date="1485035430804" expanded="true" signature="6416:6463" ph="select * fro... PreostaleUtakmice" />
+            <marker date="1485035430804" expanded="true" signature="8596:8760" ph="insert into assists... " />
+            <marker date="1485035430804" expanded="true" signature="19512:19621" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="19715:19834" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="19929:20050" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20145:20266" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20364:20470" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20579:20688" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20788:20894" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21003:21112" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21207:21312" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21416:21524" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21619:21723" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21825:21933" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22027:22131" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22230:22339" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22442:22549" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22657:22769" ph="update playe... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/templates/players.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/controllers/playersController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/controllers/refereeController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moguciPotezi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simple_html_dom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1853">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sredjenoPoTimovima.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2489">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domProba.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/obradaUtakmice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1396">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding>
+            <marker date="1484511741566" expanded="true" signature="283:625" ph="insert into TeamStats... " />
+            <marker date="1484511741566" expanded="true" signature="835:910" ph="insert into Player... " />
+            <marker date="1484511741566" expanded="true" signature="933:1285" ph="insert into PlayerStats... " />
+            <marker date="1484511741566" expanded="true" signature="1905:2188" ph="insert into Game... " />
+            <marker date="1484511741566" expanded="true" signature="2857:2906" ph="select * fro... Referee" />
+            <marker date="1484511741566" expanded="true" signature="3000:3040" ph="select max(i... Referee" />
+            <marker date="1484511741566" expanded="true" signature="3315:3410" ph="INSERT INTO Referee... " />
+            <marker date="1484511741566" expanded="true" signature="3595:3654" ph="select idRef... Referee" />
+            <marker date="1484511741566" expanded="true" signature="3780:3822" ph="select * fro... Team" />
+            <marker date="1484511741566" expanded="true" signature="3908:3970" ph="INSERT INTO Team... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/controllers/teamsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/obradaUtakmice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2805">
+          <caret line="170" column="28" lean-forward="false" selection-start-line="170" selection-start-column="28" selection-end-line="170" selection-end-column="28" />
+          <folding>
+            <marker date="1485035430804" expanded="true" signature="930:985" ph="select idPla... Player" />
+            <marker date="1485035430804" expanded="true" signature="1188:1398" ph="insert into Player... " />
+            <marker date="1485035430804" expanded="true" signature="1445:1797" ph="insert into PlayerStats... " />
+            <marker date="1485035430804" expanded="true" signature="2464:2509" ph="delete from " />
+            <marker date="1485035430804" expanded="true" signature="4689:4738" ph="select * fro... Referee" />
+            <marker date="1485035430804" expanded="true" signature="4832:4872" ph="select max(i... Referee" />
+            <marker date="1485035430804" expanded="true" signature="5147:5242" ph="INSERT INTO Referee... " />
+            <marker date="1485035430804" expanded="true" signature="5427:5486" ph="select idRef... Referee" />
+            <marker date="1485035430804" expanded="true" signature="5612:5654" ph="select * fro... Team" />
+            <marker date="1485035430804" expanded="true" signature="5740:5802" ph="INSERT INTO Team... " />
+            <marker date="1485035430804" expanded="true" signature="6271:6314" ph="select min(g... PreostaleUtakmice" />
+            <marker date="1485035430804" expanded="true" signature="6416:6463" ph="select * fro... PreostaleUtakmice" />
+            <marker date="1485035430804" expanded="true" signature="8596:8760" ph="insert into assists... " />
+            <marker date="1485035430804" expanded="true" signature="19512:19621" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="19715:19834" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="19929:20050" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20145:20266" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20364:20470" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20579:20688" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="20788:20894" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21003:21112" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21207:21312" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21416:21524" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21619:21723" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="21825:21933" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22027:22131" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22230:22339" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22442:22549" ph="update playe... " />
+            <marker date="1485035430804" expanded="true" signature="22657:22769" ph="update playe... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/data/teams.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/data/players.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="23" lean-forward="false" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/data/player.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/primercic1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <marker date="1485084451264" expanded="true" signature="556:576" ph="SELECT * FRO... Player" />
+            <marker date="1485084451264" expanded="true" signature="1058:1078" ph="SELECT * FRO... Player" />
+            <marker date="1485084451264" expanded="true" signature="1687:1747" ph="select idPla... Player" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/templates/player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/controllers/playerController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/player_listOfTeamsInit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <marker date="1485024182098" expanded="true" signature="665:698" ph="SELECT idTea... Team" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/primercic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <marker date="1485083769837" expanded="true" signature="556:576" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="962:1000" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="962:1004" ph="SELECT * FRO... player" />
+            <marker date="1485083769837" expanded="true" signature="962:1005" ph="SELECT * FRO... player" />
+            <marker date="1485083769837" expanded="true" signature="1489:1509" ph="SELECT * FRO... Player" />
+            <marker date="1485083769837" expanded="true" signature="2118:2159" ph="select playe... Player" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/templates/teams.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="733">
+          <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/controllers/playersController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/templates/players.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="100" lean-forward="false" selection-start-line="21" selection-start-column="100" selection-end-line="21" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

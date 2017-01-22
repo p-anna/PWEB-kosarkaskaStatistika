@@ -1,13 +1,15 @@
 app.controller('refereesController', function($scope, $timeout, $http){
     $scope.referees = [];
     $scope.headers = [];
+    $scope.teams = [];
 
-    $scope.selected1 = "Average - Per Game";
-    $scope.selected2 = "All Teams";
-    $scope.selected3 = "Full Season";
+    $scope.team = "All Teams";
+    $scope.seasonPart = "Full Season";
 
     $scope.propertyName = '';
     $scope.reverse = true;
+
+    $scope.loading = false;
 
     $scope.sortBy = function(propertyName) {
         $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
@@ -15,35 +17,47 @@ app.controller('refereesController', function($scope, $timeout, $http){
     };
 
 
+
     $scope.prikazi = function(){
+        $scope.loading = true;
+        /* priprema parametara */
+        var teamID = null;
+        for(t in $scope.teams){
+            if($scope.team === t.teamName)
+                teamID = t.idTeam;
+        }
+        var season = $scope.seasonPart === "Full Season" ? null : $scope.seasonPart;
+
         $http({
             url: "../../source/primercic.php",
             method: "GET",
-            params: {selected1: $scope.selected1, selected2: $scope.selected2, selected3: $scope.selected3}
+            params: {team: teamID, seasonPart: season}
         }).then(function(response){
             $scope.referees = response.data.referees;
             $scope.headers = response.data.header;
+            $scope.propertyName = $scope.headers[0].propertyName; //ovo ne znam sta je
+        }).finally(function () {
+            $scope.loading = false;
         });
-    };
+    }
 
     init();
 
     function init() {
-        $http({
-            url: "../../source/primercic.php",
-            method: "GET",
-            params: {selected1: $scope.selected1, selected2: $scope.selected2, selected3: $scope.selected3}
-        }).then(function(response){
-            $scope.referees = response.data.referees;
-            $scope.headers = response.data.header;
-            $scope.propertyName = $scope.headers[0].propertyName;
-        });
-    };
+        $scope.prikazi();
+        $http.get("../../source/player_listOfTeamsInit.php")
+            .then(function(response) {
+                $scope.teams = response.data;
+            });
+    }
 
     $scope.isNameProp = function (propName) {
-        if(propName.contains("Name") || propName.contains("name"))
-            return false;
-        else
+
+        if(propName === "refereeName"){
             return true;
+        }
+        else{
+            return false;
+        }
     };
 });
