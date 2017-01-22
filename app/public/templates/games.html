@@ -27,30 +27,17 @@
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
-                    <th>
-                        <button ng-click="sortBy('game')">Game</button>
-                        <span class="sortorder" ng-show="propertyName === 'game'" ng-class="{reverse: reverse}"></span>
-                    </th>
-                    <th>
-                        <button ng-click="sortBy('attendance')">Attendance</button>
-                        <span class="sortorder" ng-show="propertyName === 'attendance'" ng-class="{reverse: reverse}"></span>
-                    </th>
-                    <th>
-                        <button ng-click="sortBy('min')">MIN</button>
-                        <span class="sortorder" ng-show="propertyName === 'min'" ng-class="{reverse: reverse}"></span>
-                    </th>
-                    <th>
-                        <button ng-click="sortBy('pace')">PACE</button>
-                        <span class="sortorder" ng-show="propertyName === 'pace'" ng-class="{reverse: reverse}"></span>
+                    <th ng-repeat="h in headers">
+                        <button ng-click="sortBy(h.nameOfProperty)">{{h.headerText}}</button>
+                        <span class="sortorder" ng-show="propertyName === h.nameOfProperty" ng-class="{reverse: reverse}"></span>
                     </th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="game in games | orderBy:propertyName:reverse">
-                    <td>{{game.game}}</td>
-                    <td>{{game.attendance}}</td>
-                    <td>{{game.min}}</td>
-                    <td>{{game.pace}}</td>
+                <tr ng-repeat="game in games | orderBy:propertyName:reverse ">
+                    <td ng-repeat="h in headers">
+                        {{game[h.nameOfProperty]}}
+                    </td>
                 </tr>
                 </tbody>
             </table>

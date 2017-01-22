@@ -47,25 +47,24 @@
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
-                    <th>
-                        <button ng-click="sortBy('Name')">Team</button>
-                        <span class="sortorder" ng-show="propertyName === 'Name'" ng-class="{reverse: reverse}"></span>
-                    </th>
-                    <th>
-                        <button ng-click="sortBy('photoUrl')">Photo</button>
-                        <span class="sortorder" ng-show="propertyName === 'photoUrl'" ng-class="{reverse: reverse}"></span>
-                    </th>
-                    <th>
-                        <button ng-click="sortBy('Country')">Country</button>
-                        <span class="sortorder" ng-show="propertyName === 'Country'" ng-class="{reverse: reverse}"></span>
+                    <th ng-repeat="h in headers">
+                        <button ng-click="sortBy(h.nameOfProperty)">{{h.headerText}}</button>
+                        <span class="sortorder" ng-show="propertyName === h.nameOfProperty" ng-class="{reverse: reverse}"></span>
                     </th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="team in teams | orderBy:propertyName:reverse">
-                    <td>{{team.Name}}</td>
-                    <td>{{team.photoUrl}}</td>
-                    <td>{{team.Country}}</td>
+                <tr ng-repeat="team in teams | orderBy:propertyName:reverse ">
+                    <!-- Ne radi ovaj ng-show, isprobavala i nista nije proradio
+                         Iznervirala sam se pa ostavim ovako -->
+                    <td ng-repeat="h in headers">
+                        <a href="#/teams/{{team.teamID}}" ng-show="isNameProp(h.nameOfProperty)">
+                            {{team[h.nameOfProperty]}}
+                        </a>
+                        <span ng-show="!isNameProp(h.nameOfProperty)">
+                                {{team[h.nameOfProperty]}}
+                        </span>
+                    </td>
                 </tr>
                 </tbody>
             </table>

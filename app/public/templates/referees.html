@@ -28,20 +28,24 @@
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
-                    <th>
-                        <button ng-click="sortBy('Name')">Referee</button>
-                        <span class="sortorder" ng-show="propertyName === 'Name'" ng-class="{reverse: reverse}"></span>
-                    </th>
-                    <th>
-                        <button ng-click="sortBy('photoUrl')">Nesto</button>
-                        <span class="sortorder" ng-show="propertyName === 'photoUrl'" ng-class="{reverse: reverse}"></span>
+                    <th ng-repeat="h in headers">
+                        <button ng-click="sortBy(h.nameOfProperty)">{{h.headerText}}</button>
+                        <span class="sortorder" ng-show="propertyName === h.nameOfProperty" ng-class="{reverse: reverse}"></span>
                     </th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="referee in referees | orderBy:propertyName:reverse">
-                    <td><a href="#/referee/{{referee.ID}}">{{referee.Name}}</a></td>
-                    <td>{{referee.photoUrl}}</td>
+                <tr ng-repeat="referee in referees | orderBy:propertyName:reverse ">
+                    <!-- Ne radi ovaj ng-show, isprobavala i nista nije proradio
+                         Iznervirala sam se pa ostavim ovako -->
+                    <td ng-repeat="h in headers">
+                        <a href="#/referee/{{referee.refereeID}}" ng-show="isNameProp(h.nameOfProperty)">
+                            {{referee[h.nameOfProperty]}}
+                        </a>
+                        <span ng-show="!isNameProp(h.nameOfProperty)">
+                                {{referee[h.nameOfProperty]}}
+                        </span>
+                    </td>
                 </tr>
                 </tbody>
             </table>
