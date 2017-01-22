@@ -1,7 +1,10 @@
 <?php
 error_reporting(0);
 $method = $_SERVER['REQUEST_METHOD'];
-$url_params = explode("/",$_SERVER['PATH_INFO']);
+$url = $_SERVER['REQUEST_URI'];
+$query_str = parse_url($url, PHP_URL_QUERY);
+parse_str($query_str, $url_params);
+file_put_contents("log.txt", $url_params);
 
 $link = mysqli_connect('localhost','root','root','mydb');
 mysqli_set_charset($link,'utf8');
@@ -14,13 +17,17 @@ if(mysqli_connect_errno())
 $table = $url_params[1];
 
 //Implementirati metodu koja dohvata sve reci iz leksikona
-if($method == 'GET' && $table == 'players' && count($url_params) == 4)
+if($method == 'GET' && count($url_params) == 5)
 {
-    file_put_contents("log.txt", "4 parametra");
     $sql = "SELECT * FROM Player";
+    $result = mysqli_query($link,$sql);
+    $json = array();
+    for($i=0; $i<mysqli_num_rows($result);$i++)
+        array_push($json, mysqli_fetch_object($result));
+    echo json_encode($json);
 }
 //Metoda koja dohvata samo jednu rec iz leksikona vraca objekat koji sadrzi rec i njen skor ili false ako se trazena rec ne nalazi u leksikonu
-if($method == 'GET' && $table == 'players' && count($url_params) == 3)
+if($method == 'GET' && count($url_params) == 3)
 {
     file_put_contents("log.txt", "3 parametra");
     $word = $url_params[2];
@@ -49,6 +56,7 @@ if(!$result)
 {
     printf("SQL ERROR: %s\n", mysqli_error($link));
 }
+<<<<<<< HEAD
 
 if($method == 'GET')
 {
@@ -75,5 +83,26 @@ elseif($method == 'POST')
     echo "Data successfully inserted!";
 }
 
+=======
+//
+//if($method == 'GET')
+//{
+////    echo '[';
+////    for($i=0; $i<mysqli_num_rows($result);$i++)
+////        echo ($i>0?',':'').json_encode(mysqli_fetch_object($result));
+////    echo ']';
+//        file_put_contents("log.txt", $url_params[1]);
+//      $json = array();
+//      for($i=0; $i<mysqli_num_rows($result);$i++)
+//          array_push($json, mysqli_fetch_object($result));
+//      echo json_encode($json);
+//
+//}
+//elseif($method == 'POST')
+//{
+//    echo "Data successfully inserted!";
+//}
+//
+>>>>>>> afdcb3dfd16e12f9da67eeb5ecefe5961a6d411f
 
 mysqli_close($link);
