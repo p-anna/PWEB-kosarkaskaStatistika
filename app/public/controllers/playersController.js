@@ -13,7 +13,7 @@ app.controller('playersController', function($scope, $timeout, $http){
     $scope.propertyName = '';
     $scope.reverse = true;
 
-
+    $scope.loading = false;
 
     $scope.sortBy = function(propertyName) {
         $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
@@ -44,31 +44,20 @@ app.controller('playersController', function($scope, $timeout, $http){
     //     });
     // };
 
-    $scope.isNameProp = function (propName) {
-
-        // if(propName.contains("Name") || propName.contains("name"))
-        //     return false;
-        // else
-        //     return true;
-
-        if(propName === "playerName"){
-            return true;
-        }
-        else{
-            return false;
-        }
-    };
-
     init();
 
     function init() {
         //$scope.prikazi();
+        $scope.loading = true;
         $http.get("data/players.json")
             .then(function (response) {
-            $scope.players = response.data.players;
-            $scope.headers = response.data.header;
-            $scope.propertyName = $scope.headers[0].nameOfProperty;
-        });
+                $scope.players = response.data.players;
+                $scope.headers = response.data.header;
+                $scope.propertyName = $scope.headers[0].nameOfProperty;
+            })
+            .finally(function () {
+                $scope.loading = false;
+            });
 
         // $http.get("data/teams.json")
         //     .then(function (response) {
@@ -83,6 +72,16 @@ app.controller('playersController', function($scope, $timeout, $http){
             });
 
     }
+
+    $scope.isNameProp = function (propName) {
+
+        if(propName === "playerName"){
+            return true;
+        }
+        else{
+            return false;
+        }
+    };
 
 
 });

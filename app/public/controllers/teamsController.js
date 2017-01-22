@@ -9,6 +9,8 @@ app.controller('teamsController', function($scope, $timeout, $http){
     $scope.propertyName = '';
     $scope.reverse = true;
 
+    $scope.loading = false;
+
     $scope.sortBy = function(propertyName) {
         $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
         $scope.propertyName = propertyName;
@@ -17,6 +19,7 @@ app.controller('teamsController', function($scope, $timeout, $http){
 
 
     $scope.prikazi = function(){
+        $scope.loading = true;
         /* priprema parametara */
         var season = $scope.seasonPart === "Full Season" ? null : $scope.seasonPart;
         var week = $scope.week === "All Weeks" ? null : $scope.week;
@@ -28,12 +31,15 @@ app.controller('teamsController', function($scope, $timeout, $http){
         }).then(function(response){
             $scope.referees = response.data.referees;
             $scope.headers = response.data.header;
+        }).finally(function () {
+            $scope.loading = false;
         });
     };
 
     init();
 
     function init() {
+        $scope.loading = true;
         $http({
             url: "../../source/primercic.php",
             method: "GET",
@@ -42,13 +48,18 @@ app.controller('teamsController', function($scope, $timeout, $http){
             $scope.referees = response.data.referees;
             $scope.headers = response.data.header;
             $scope.propertyName = $scope.headers[0].propertyName;
+        }).finally(function () {
+            $scope.loading = false;
         });
     };
 
     $scope.isNameProp = function (propName) {
-        if(propName.contains("Name") || propName.contains("name"))
-            return false;
-        else
+
+        if(propName === "teamName"){
             return true;
+        }
+        else{
+            return false;
+        }
     };
 });

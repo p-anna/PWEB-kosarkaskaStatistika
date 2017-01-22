@@ -9,6 +9,8 @@ app.controller('refereesController', function($scope, $timeout, $http){
     $scope.propertyName = '';
     $scope.reverse = true;
 
+    $scope.loading = false;
+
     $scope.sortBy = function(propertyName) {
         $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
         $scope.propertyName = propertyName;
@@ -17,6 +19,7 @@ app.controller('refereesController', function($scope, $timeout, $http){
 
 
     $scope.prikazi = function(){
+        $scope.loading = true;
         /* priprema parametara */
         var teamID = null;
         for(t in $scope.teams){
@@ -33,6 +36,8 @@ app.controller('refereesController', function($scope, $timeout, $http){
             $scope.referees = response.data.referees;
             $scope.headers = response.data.header;
             $scope.propertyName = $scope.headers[0].propertyName; //ovo ne znam sta je
+        }).finally(function () {
+            $scope.loading = false;
         });
     }
 
@@ -47,9 +52,12 @@ app.controller('refereesController', function($scope, $timeout, $http){
     }
 
     $scope.isNameProp = function (propName) {
-        if(propName.contains("Name") || propName.contains("name"))
-            return false;
-        else
+
+        if(propName === "refereeName"){
             return true;
+        }
+        else{
+            return false;
+        }
     };
 });

@@ -17,6 +17,7 @@ app.controller('gamesController', function($scope, $timeout, $http){
 
 
     $scope.prikazi = function(){
+        $scope.loading = true;
 
         /* priprema parametara */
         var teamID = null;
@@ -33,6 +34,8 @@ app.controller('gamesController', function($scope, $timeout, $http){
         }).then(function(response){
             $scope.games = response.data.games;
             $scope.headers = response.data.header;
+        }).finally( function () {
+            $scope.loading = false;
         });
     };
 
