@@ -60,7 +60,7 @@
                 <thead>
                     <tr>
                         <th ng-repeat="h in headers">
-                            <button class='propDugme' ng-click="sortBy(h.nameOfProperty)">{{h.headerText}}</button>
+                            <button class='propDugme' ng-click="sortBy(h.nameOfProperty)">{{h.name}}</button>
                             <span class="sortorder" ng-show="propertyName === h.nameOfProperty" ng-class="{reverse: reverse}"></span>
                         </th>
                     </tr>
@@ -68,7 +68,7 @@
                 <tbody>
                 <tr ng-repeat="p in players | orderBy:propertyName:reverse ">
                     <td ng-repeat="h in headers">
-                        <a href="#/players/{{p.playerID}}" ng-show="isNameProp(h.nameOfProperty)">
+                        <a href="#/players/{{p.idPlayer}}" ng-show="isNameProp(h.nameOfProperty)">
                             {{p[h.nameOfProperty]}}
                         </a>
                         <span ng-hide="isNameProp(h.nameOfProperty)">

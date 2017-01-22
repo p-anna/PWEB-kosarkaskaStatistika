@@ -49,7 +49,7 @@
                 <thead>
                 <tr>
                     <th ng-repeat="h in headers">
-                        <button class='propDugme' ng-click="sortBy(h.nameOfProperty)">{{h.headerText}}</button>
+                        <button class='propDugme' ng-click="sortBy(h.nameOfProperty)">{{h.name}}</button>
                         <span class="sortorder" ng-show="propertyName === h.nameOfProperty" ng-class="{reverse: reverse}"></span>
                     </th>
                 </tr>

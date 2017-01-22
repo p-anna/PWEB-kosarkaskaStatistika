@@ -5,9 +5,20 @@
         <hr>
         <div class="container">
             <form>
-                <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="seasonPart">
+                <select class="form-control col-xs-4" id="sel4" ng-change="prikazi()" ng-model="seasonPart">
                     <option>Full Season</option>
-                    <option ng-repeat="team in teams">{{team.Name}}</option>
+                    <option>Regular Season</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>Top 16</option>
+                    <option>Playoffs</option>
+                    <option>Final Four</option>
                 </select>
                 <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="week">
                     <option>All Weeks</option>
@@ -17,7 +28,7 @@
                 </select>
                 <select class="form-control col-xs-4" id="sel3" ng-change="prikazi()" ng-model="team">
                     <option>All Teams</option>
-                    <option ng-repeat="team in teams | orderBy:'Name'">{{team.Name}}</option>
+                    <option ng-repeat="team in teams | orderBy:'Name'">{{team.teamName}}</option>
                 </select>
             </form>
         </div>
@@ -29,7 +40,7 @@
                 <thead>
                 <tr>
                     <th ng-repeat="h in headers">
-                        <button class='propDugme' ng-click="sortBy(h.nameOfProperty)">{{h.headerText}}</button>
+                        <button class='propDugme' ng-click="sortBy(h.nameOfProperty)">{{h.name}}</button>
                         <span class="sortorder" ng-show="propertyName === h.nameOfProperty" ng-class="{reverse: reverse}"></span>
                     </th>
                 </tr>
