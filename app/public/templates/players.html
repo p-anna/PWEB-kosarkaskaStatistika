@@ -68,17 +68,13 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="p in players | orderBy:propertyName:reverse ">
-                    <!-- Ne radi ovaj ng-show, isprobavala i nista nije proradio
-                         Iznervirala sam se pa ostavim ovako -->
                     <td ng-repeat="h in headers">
-                        <a href="#/players/{{player.playerID}}" ng-show="isNameProp(h.nameOfProperty)">
+                        <a href="#/players/{{p.playerID}}" ng-show="isNameProp(h.nameOfProperty)">
                             {{p[h.nameOfProperty]}}
                         </a>
-                        <!--
-                        <span ng-show="!isNameProp(h.nameOfProperty)">
-                                {{p[h.nameOfProperty]}}
+                        <span ng-hide="isNameProp(h.nameOfProperty)">
+                            {{p[h.nameOfProperty]}}
                         </span>
-                        -->
                     </td>
                 </tr>
                 </tbody>

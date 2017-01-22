@@ -7,7 +7,7 @@
   ,
   "players": [
     {
-      "playerID": 1,
+      "playerID": "P000046",
       "playerName": "Zoran Rasic",
       "photoURL": "http://www.euroleague.net/rs/7bwwrvyg8wb74paf/c4974b14-d249-46d4-9092-0e470e8d733d/536/filename/c49.jpg",
       "playerHeight": 192,

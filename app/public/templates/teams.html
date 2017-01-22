@@ -61,7 +61,7 @@
                         <a href="#/teams/{{team.teamID}}" ng-show="isNameProp(h.nameOfProperty)">
                             {{team[h.nameOfProperty]}}
                         </a>
-                        <span ng-show="!isNameProp(h.nameOfProperty)">
+                        <span ng-hide="isNameProp(h.nameOfProperty)">
                                 {{team[h.nameOfProperty]}}
                         </span>
                     </td>

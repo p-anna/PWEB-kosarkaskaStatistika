@@ -4,12 +4,21 @@ app.controller('playerController', function($scope, $timeout, $http, $routeParam
     //za sad se prikazuje jedan zakucan
     $scope.player = {};
 
+    console.log($routeParams.id);
     init();
 
     function init() {
-        $http.get("data/player.json")
-            .then(function(response) {
-                $scope.player = response.data;
-            });
+        $http({
+            url: "../../source/primercic.php",
+            method: "GET",
+            params: {screen: "players", id: $routeParams.id}
+        }).then(function(response){
+            $scope.player = response.data[0];
+            console.log($scope.player.photoURL);
+        });
+        // $http.get("data/player.json")
+        //     .then(function(response) {
+        //         $scope.player = response.data;
+        //     });
     }
 });
