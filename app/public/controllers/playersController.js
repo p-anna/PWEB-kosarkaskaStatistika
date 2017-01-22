@@ -13,6 +13,8 @@ app.controller('playersController', function($scope, $timeout, $http){
     $scope.propertyName = '';
     $scope.reverse = true;
 
+
+
     $scope.sortBy = function(propertyName) {
         $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
         $scope.propertyName = propertyName;
@@ -20,11 +22,21 @@ app.controller('playersController', function($scope, $timeout, $http){
 
 
     // $scope.prikazi = function(){
+            /* priprema parametara */
+            // teamID = null;
+            // for(t in $scope.teams){
+            //     if($scope.team === t.teamName)
+            //         teamID = t.idTeam;
+            // }
+            // var position = $scope.position === "All Positions" ? null : $scope.position;
+            // var season = $scope.seasonPart === "Full Season" ? null : $scope.seasonPart;
+            // var week = $scope.week === "All Weeks" ? null : $scope.week;
+
     //     $http({
     //         url: "../../source/primercic.php",
     //         method: "GET",
-    //         params: {statisticType: $scope.statisticType, team: $scope.team, position: $scope.position,
-    //             seasonPart: $scope.seasonPart, week: $scope.week}
+    //         params: {statisticType: $scope.statisticType, team: teamID, position: position,
+    //             seasonPart: season, week: week}
     //     }).then(function(response){
     //         $scope.players = response.data.players;
     //         $scope.headers = response.data.header;
