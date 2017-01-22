@@ -1,0 +1,82 @@
+{
+  "header" : [
+  {"name" : "Player", "nameOfProperty" : "playerName"},
+  {"name" : "MIN", "nameOfProperty" : "nestoMin"},
+  {"name" : "PTS", "nameOfProperty" : "PTS"}
+]
+,
+  "teams" : [
+      {"teamName": "prviIme", "teamID": 125},
+      {"teamName": "Fenerbahce Ulker", "teamID": 124}
+  ]
+  ,
+  "team1": [
+    {
+      "playerID" : 1,
+      "playerName": "Zoran Rasic",
+      "nestoMin": 5,
+      "PTS": 2
+    },
+    {
+      "playerID" : 2,
+      "playerName": "Milan",
+      "nestoMin": 5,
+      "PTS": 2
+    },
+    {
+      "playerID" : 3,
+      "playerName": "Ana",
+      "nestoMin": 5,
+      "PTS": 2
+    }
+  ]
+,
+  "team2": [
+    {
+      "playerID" : 1,
+      "playerName": "Zoran Rasic",
+      "nestoMin": 5,
+      "PTS": 2
+    },
+    {
+      "playerID" : 2,
+      "playerName": "Zoran Rasic",
+      "nestoMin": 5,
+      "PTS": 2
+    },
+    {
+      "playerID" : 3,
+      "playerName": "Zoran Rasic",
+      "nestoMin": 5,
+      "PTS": 2
+    }
+  ]
+  ,
+  "team1Percents":
+  {
+      "playerName": "Percents",
+      "nestoMin": "5%",
+      "PTS": "2%"
+    }
+  ,
+  "team2Percents":
+  {
+    "playerName": "Percents",
+    "nestoMin": "5%",
+    "PTS": "2%"
+  }
+  ,
+  "team1Total":
+  {
+    "playerName": "Total",
+    "nestoMin": 200,
+    "PTS": 45
+  }
+  ,
+  "team2Total":
+  {
+    "playerName": "Total",
+    "nestoMin": 200,
+    "PTS": 45
+  }
+}

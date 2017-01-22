@@ -65,6 +65,7 @@ ul > li > img {
     width:auto;
     display:inline-block;
     margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 .table-striped>tbody>tr:nth-child(odd)>td,
@@ -113,4 +114,9 @@ ul > li > img {
 a{
     color: #761c19;
     font-weight: bold;
+}
+
+.velikiLink{
+    padding-left: 50px;
+    font-size: 20px;
 }

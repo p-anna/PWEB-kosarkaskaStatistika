@@ -11,6 +11,8 @@ app.controller('gamesController', function($scope, $timeout, $http){
     $scope.propertyName = '';
     $scope.reverse = true;
 
+    $scope.loading = false;
+
     $scope.sortBy = function(propertyName) {
         $scope.reverse = ($scope.propertyName === propertyName) ? !$scope.reverse : false;
         $scope.propertyName = propertyName;
