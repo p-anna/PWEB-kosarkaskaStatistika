@@ -19,7 +19,17 @@ app.controller('teamController', function($scope, $timeout, $http, $routeParams)
             params: {season: 2016, seasonMonth: season, teamId: $routeParams.id}
         }).then(function(response){
             $scope.headers = response.data.header;
-            $scope.games = response.data.games;
+            $scope.games = response.data.players;
         });
     }
+
+    $scope.isNameProp = function (propName) {
+
+        if(propName === "ATeam"){
+            return true;
+        }
+        else{
+            return false;
+        }
+    };
 });

@@ -29,7 +29,7 @@ app.controller('teamsController', function($scope, $timeout, $http){
             method: "GET",
             params: {statisticType: $scope.statisticType, seasonMonth: season, week: week, season: 2016}
         }).then(function(response){
-            $scope.teams = response.data.players;
+            $scope.teams = response.data.teams;
             $scope.headers = response.data.header;
         }).finally(function () {
             $scope.loading = false;

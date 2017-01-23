@@ -30,7 +30,7 @@ if($method == 'GET' && count($url_params) == 5)
 $table = $url_params["screen"];
 if($method == 'GET' && $table == "players" && count($url_params) == 2)
 {
-    $id = $url_params["id"];
+    $id = $url_params["playerId"];
     file_put_contents("log.txt", $id);
     $sql = "SELECT * FROM player WHERE idPlayer = '$id'";
     $result = mysqli_query($link,$sql);

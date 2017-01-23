@@ -59,7 +59,7 @@
                     <!-- Ne radi ovaj ng-show, isprobavala i nista nije proradio
                          Iznervirala sam se pa ostavim ovako -->
                     <td ng-repeat="h in headers">
-                        <a href="#/teams/{{team.teamID}}" ng-show="isNameProp(h.nameOfProperty)">
+                        <a href="#/teams/{{team.teamId}}" ng-show="isNameProp(h.nameOfProperty)">
                             {{team[h.nameOfProperty]}}
                         </a>
                         <span ng-hide="isNameProp(h.nameOfProperty)">
