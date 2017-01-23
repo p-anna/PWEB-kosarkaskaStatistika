@@ -5,7 +5,7 @@
         <hr>
         <div class="container">
             <form>
-                <select class="form-control col-xs-4" id="sel4" ng-change="prikazi()" ng-model="seasonPart">
+                <select class="form-control col-xs-4" id="sel1" ng-change="prikazi()" ng-model="seasonPart">
                     <option>Full Season</option>
                     <option>Regular Season</option>
                     <option>October</option>
@@ -29,6 +29,10 @@
                 <select class="form-control col-xs-4" id="sel3" ng-change="prikazi()" ng-model="team">
                     <option>All Teams</option>
                     <option ng-repeat="team in teams | orderBy:'Name'">{{team.teamName}}</option>
+                </select>
+                <select class="form-control col-xs-4" id="sel4" ng-change="prikazi()" ng-model="seasons">
+                    <option>2015-2016</option>
+                    <option>2016-2017</option>
                 </select>
             </form>
         </div>

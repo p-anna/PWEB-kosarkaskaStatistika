@@ -16,7 +16,7 @@
 
 #ball1 {
     position: absolute;
-    top: 292px;
+    top: 390px;
     left: 10%;
     animation-iteration-count: 1;
     -moz-animation-iteration-count: 1;
@@ -48,7 +48,7 @@
 
 #ball2 {
     position: absolute;
-    top: 292px;
+    top: 430px;
     left: 18%;
     animation-iteration-count: 1;
     -moz-animation-iteration-count: 1;
@@ -80,7 +80,7 @@
 
 #ball3 {
     position: absolute;
-    top: 400px;
+    top: 490px;
     left: 27%;
     animation-iteration-count: 1;
     -moz-animation-iteration-count: 1;
@@ -112,7 +112,7 @@
 
 #ball4 {
     position: absolute;
-    top: 530px;
+    top: 610px;
     left: 36%;
     animation-iteration-count: 1;
     -moz-animation-iteration-count: 1;

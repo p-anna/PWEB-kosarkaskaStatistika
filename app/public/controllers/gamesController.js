@@ -4,9 +4,12 @@ app.controller('gamesController', function($scope, $timeout, $http){
     $scope.headers = [];
     $scope.teams = [];
 
+
     $scope.team = "All Teams";
     $scope.seasonPart = "Full Season";
     $scope.week = "All Weeks";
+    $scope.seasons = "2016-2017";
+
 
     $scope.propertyName = '';
     $scope.reverse = true;
@@ -29,12 +32,14 @@ app.controller('gamesController', function($scope, $timeout, $http){
                 teamID = $scope.teams[t].idTeam;
         }
 
-        var season = $scope.seasonPart === "Full Season" ? "null" : $scope.seasonPart;
-        var week = $scope.week === "All Weeks" ? "null" : $scope.week;
+        var season = $scope.seasonPart == "Full Season" ? "null" : $scope.seasonPart;
+        var week = $scope.week == "All Weeks" ? "null" : $scope.week;
+        var siz = $scope.seasons == "2016-2017" ? 2016 : 2015;
+
         $http({
             url: "../../source/games.php",
             method: "GET",
-            params: {seasonMonth: season, season: 2016}
+            params: {seasonMonth: season, season: siz}
         }).then(function(response){
             $scope.games = response.data.teams;
             $scope.headers = response.data.header;

@@ -8,8 +8,10 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
     $scope.team2 = [];
     $scope.team1Total = [];
     $scope.team2Total = [];
+    $scope.init = init;
 
     $scope.statisticType = "Average | Per Game";
+    $scope.seasons = "2016-2017";
 
     $scope.propertyName = '';
     $scope.reverse = true;
@@ -22,15 +24,15 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
     };
 
     console.log($routeParams.id);
-    init();
 
-    function init() {
-
+    $scope.prikazi = function(){
         $scope.loading = true;
+        var siz = $scope.seasons == "2016-2017" ? 2016 : 2015;
+
         $http({
             url: "../../source/game.php",
             method: "GET",
-            params: {season: 2016, gameCode: $routeParams.id}
+            params: {season: siz, gameCode: $routeParams.id}
         }).then(function(response){
             $scope.headers = response.data.header;
             $scope.teams = response.data.teams;
@@ -41,5 +43,12 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
         }).finally(function () {
             $scope.loading = false;
         });
+    }
+
+    init();
+
+    function init() {
+
+        $scope.prikazi();
     }
 });

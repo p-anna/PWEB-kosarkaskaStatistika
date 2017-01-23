@@ -1,7 +1,7 @@
 body {
     line-height: 2.429;
     background-image: url('../img/background.jpg');
-    background-size: 1600px;
+    background-size: 100%;
     background-attachment: fixed;
 }
 
@@ -16,7 +16,9 @@ h2 {
 }
 
 .navbar {
-    margin-bottom: 12px;
+    background-color: transparent;
+    border: transparent;
+    color: #782b02;
 }
 
 hr {
@@ -60,7 +62,6 @@ ul > li > img {
         font-size: 12px;
     }
 }
-
 
 .form-control {
     width:auto;
@@ -109,6 +110,7 @@ th{
     font-style: oblique;
     font-variant: diagonal-fractions;
     font-family: "Georgia";
+    z-index: 4;
 }
 
 .img-circle {
@@ -150,4 +152,12 @@ table.playerInfo {
 .span3.well {
     background-color: transparent;
     border: none;
+}
+
+.navbar-default .navbar-brand{
+    color: #782b02;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #782b02;
 }
