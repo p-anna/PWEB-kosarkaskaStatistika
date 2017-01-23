@@ -41,22 +41,5 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
         }).finally(function () {
             $scope.loading = false;
         });
-
-        /*
-        $scope.loading = true;
-        $http.get("data/game.json")
-            .then(function(response){
-                $scope.headers = response.data.header;
-                $scope.teams = response.data.teams;
-                $scope.team1 = response.data.team1;
-                $scope.team2 = response.data.team2;
-                $scope.team1Total = response.data.team1Total;
-                $scope.team2Total = response.data.team2Total;
-                $scope.propertyName = response.data.header[0].nameOfProperty;
-            }).finally(function () {
-                $scope.loading = false;
-            });
-
-*/
     }
 });

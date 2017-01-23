@@ -4,10 +4,13 @@ app.controller('playerController', function($scope, $timeout, $http, $routeParam
     //za sad se prikazuje jedan zakucan
     $scope.player = {};
     $scope.headers = [];
+    $scope.pStats = [];
     $scope.loading = false;
 
-    console.log($routeParams.id);
-    init();
+    $scope.init = init;
+
+
+    $scope.init();
 
     function init() {
         $scope.loading = true;
@@ -18,6 +21,7 @@ app.controller('playerController', function($scope, $timeout, $http, $routeParam
         }).then(function(response){
             $scope.player = response.data.info;
             $scope.pStats = response.data.stats;
+            $scope.headers = response.data.header;
         }).finally(function () {
             $scope.loading = false;
         });

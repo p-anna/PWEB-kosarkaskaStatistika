@@ -23,11 +23,12 @@ app.controller('gamesController', function($scope, $timeout, $http){
         $scope.loading = true;
 
         /* priprema parametara */
-        var teamID = null;
-        for(t in $scope.teams){
-            if($scope.team === t.teamName)
-                teamID = t.idTeam;
+        var teamID = "null";
+        for(var t = 0; t < $scope.teams.length; t++){
+            if($scope.team == $scope.teams[t].teamName)
+                teamID = $scope.teams[t].idTeam;
         }
+
         var season = $scope.seasonPart === "Full Season" ? null : $scope.seasonPart;
         var week = $scope.week === "All Weeks" ? null : $scope.week;
         $http({
