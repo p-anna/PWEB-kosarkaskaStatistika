@@ -29,14 +29,14 @@ app.controller('gamesController', function($scope, $timeout, $http){
                 teamID = $scope.teams[t].idTeam;
         }
 
-        var season = $scope.seasonPart === "Full Season" ? null : $scope.seasonPart;
-        var week = $scope.week === "All Weeks" ? null : $scope.week;
+        var season = $scope.seasonPart === "Full Season" ? "null" : $scope.seasonPart;
+        var week = $scope.week === "All Weeks" ? "null" : $scope.week;
         $http({
-            url: "../../source/primercic.php",
+            url: "../../source/games.php",
             method: "GET",
-            params: {team: teamID, seasonPart: season, week: week}
+            params: {seasonMonth: season, season: 2016}
         }).then(function(response){
-            $scope.games = response.data.games;
+            $scope.games = response.data.teams;
             $scope.headers = response.data.header;
         }).finally( function () {
             $scope.loading = false;
@@ -55,7 +55,7 @@ app.controller('gamesController', function($scope, $timeout, $http){
     };
 
     $scope.isNameProp = function (propName) {
-        if(propName === "gameName")
+        if(propName === "team1" || propName === "team2")
             return true;
         else
             return false;
