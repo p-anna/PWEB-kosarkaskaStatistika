@@ -181,5 +181,5 @@ $i = 0;
 for($i = 0; $i < $rez->num_rows; $i++){
     array_push($tabela, $rez->fetch_assoc());
 }
-$poruka->players = $tabela;
+$poruka->teams = $tabela;
 echo json_encode($poruka);

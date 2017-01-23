@@ -6,8 +6,6 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
     $scope.teams = [];
     $scope.team1 = [];
     $scope.team2 = [];
-    $scope.team1Percents = [];
-    $scope.team2Percents = [];
     $scope.team1Total = [];
     $scope.team2Total = [];
 
@@ -50,8 +48,6 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
                 $scope.teams = response.data.teams;
                 $scope.team1 = response.data.team1;
                 $scope.team2 = response.data.team2;
-                $scope.team1Percents = response.data.team1Percents;
-                $scope.team2Percents = response.data.team2Percents;
                 $scope.team1Total = response.data.team1Total;
                 $scope.team2Total = response.data.team2Total;
                 $scope.propertyName = response.data.header[0].nameOfProperty;
