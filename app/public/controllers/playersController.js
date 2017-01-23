@@ -4,6 +4,7 @@ app.controller('playersController', function($scope, $timeout, $http){
     $scope.teams = [];
     $scope.headers = [];
     $scope.init = init;
+    $scope.prikazi = prikazi;
 
     $scope.statisticType = "Average | Per Game";
     $scope.team = "All Teams";
@@ -22,8 +23,6 @@ app.controller('playersController', function($scope, $timeout, $http){
     };
 
 
-
-
     init();
 
     function init() {
@@ -34,7 +33,7 @@ app.controller('playersController', function($scope, $timeout, $http){
                 $scope.prikazi();
             });
     }
-    $scope.prikazi = function(){
+    function prikazi(){
             $scope.loading = true;
         /* priprema parametara */
         var teamID = "null";
@@ -62,18 +61,9 @@ app.controller('playersController', function($scope, $timeout, $http){
             .finally(function () {
                 $scope.loading = false;
             });
-    };
-
-    init();
-
-    function init() {
-        $scope.prikazi();
-        $http.get("../../source/player_listOfTeamsInit.php")
-            .then(function(response) {
-                $scope.teams = response.data;
-            });
-
     }
+
+
 
     $scope.isNameProp = function (propName) {
 

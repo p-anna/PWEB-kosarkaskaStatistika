@@ -79,20 +79,20 @@ if($method == 'GET')
 //        echo ($i>0?',':'').json_encode(mysqli_fetch_object($result));
 //    echo ']';
 
-    echo "[]";
-    exit(0);
-      $poruka = new stdClass();
-      $json = array();
-      for($i=0; $i<mysqli_num_rows($result);$i++)
-          array_push($json, mysqli_fetch_object($result));
-      $poruka->players = $json;
-    $textHedera= '[
-                        {"name" : "NAME", "propertyName" : "playerName"},
-                        {"name" : "Height", "propertyName" : "height"}
-                   ]';
-    //$poruka->players[0]->playerName = '<pre><a href="#/player/{{player.idPlayer}}"></a>'. $poruka->players[0]->playerName . '</a></pre>';
-    $poruka->headers = json_decode($textHedera);
-    echo json_encode($poruka);
+   // echo "[]";
+   // exit(0);
+//      $poruka = new stdClass();
+//      $json = array();
+//      for($i=0; $i<mysqli_num_rows($result);$i++)
+//          array_push($json, mysqli_fetch_object($result));
+//      $poruka->players = $json;
+//    $textHedera= '[
+//                        {"name" : "NAME", "propertyName" : "playerName"},
+//                        {"name" : "Height", "propertyName" : "height"}
+//                   ]';
+//    //$poruka->players[0]->playerName = '<pre><a href="#/player/{{player.idPlayer}}"></a>'. $poruka->players[0]->playerName . '</a></pre>';
+//    $poruka->headers = json_decode($textHedera);
+//    echo json_encode($poruka);
 }
 elseif($method == 'POST')
 {

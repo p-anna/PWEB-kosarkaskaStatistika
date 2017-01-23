@@ -21,15 +21,15 @@ app.controller('teamsController', function($scope, $timeout, $http){
     $scope.prikazi = function(){
         $scope.loading = true;
         /* priprema parametara */
-        var season = $scope.seasonPart === "Full Season" ? null : $scope.seasonPart;
-        var week = $scope.week === "All Weeks" ? null : $scope.week;
+        var season = $scope.seasonPart === "Full Season" ? "null" : $scope.seasonPart;
+        var week = $scope.week === "All Weeks" ? "null" : $scope.week;
 
         $http({
-            url: "../../source/primercic.php",
+            url: "../../source/teams.php",
             method: "GET",
-            params: {statisticType: $scope.statisticType, seasonPart: season, week: week}
+            params: {statisticType: $scope.statisticType, seasonMonth: season, week: week, season: 2016}
         }).then(function(response){
-            $scope.referees = response.data.referees;
+            $scope.teams = response.data.players;
             $scope.headers = response.data.header;
         }).finally(function () {
             $scope.loading = false;
@@ -40,17 +40,7 @@ app.controller('teamsController', function($scope, $timeout, $http){
 
     function init() {
         $scope.loading = true;
-        $http({
-            url: "../../source/primercic.php",
-            method: "GET",
-            params: {selected1: $scope.selected1, selected2: $scope.selected2, selected3: $scope.selected3}
-        }).then(function(response){
-            $scope.referees = response.data.referees;
-            $scope.headers = response.data.header;
-            $scope.propertyName = $scope.headers[0].propertyName;
-        }).finally(function () {
-            $scope.loading = false;
-        });
+        $scope.prikazi();
     };
 
     $scope.isNameProp = function (propName) {

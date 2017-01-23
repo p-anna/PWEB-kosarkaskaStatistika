@@ -14,10 +14,10 @@ app.controller('playerController', function($scope, $timeout, $http, $routeParam
         $http({
             url: "../../source/primercic.php",
             method: "GET",
-            params: {screen: "players", id: $routeParams.id}
+            params: {screen: "players", playerId: $routeParams.id}
         }).then(function(response){
-            $scope.player = response.data.player;
-            $scope.headers = response.data.header;
+            $scope.player = response.data[0];
+            // $scope.headers = response.data.header;
         }).finally(function () {
             $scope.loading = false;
         });

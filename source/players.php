@@ -23,7 +23,7 @@ $sql="";
 $header = array();
 switch($_GET['statisticType']){
     case "Average | Per Game":
-        $sql = "select p.playerName, count(*) as 'GP', avg(pts) as 'PPG' from playerStats join player p on p.idPlayer=playerId $filter group By playerId order by 2 desc";
+        $sql = "select p.idPlayer, p.playerName, count(*) as 'GP', avg(pts) as 'PPG' from playerStats join player p on p.idPlayer=playerId $filter group By playerId order by 2 desc";
         $h0 = new stdClass(); $h0->name="Name"; $h0->nameOfProperty="playerName";
         array_push($header, $h0);
         $h1 = new stdClass(); $h1->name="GP"; $h1->nameOfProperty="GP";
