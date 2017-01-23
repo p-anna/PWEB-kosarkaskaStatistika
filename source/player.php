@@ -80,6 +80,7 @@ $rez = $conn->query($sql);
 $stats = array();
 for($i = 0; $i < $rez->num_rows; $i++)
     array_push($stats, $rez->fetch_assoc());
+$poruka->header = $header;
 $poruka->stats=$stats;
 
 echo json_encode($poruka);

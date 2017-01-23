@@ -34,6 +34,11 @@ switch($_GET['statisticType']){
     case "Accumulated Statistics":
         $sql = "select count(*) as 'GP', sum(pts) as 'PTS' from playerStats where $filter groupBy playerId order by 2 desc";
         break;
+    case "Advanced Statistics":
+
+
+        //Effective Field Goal Percentage; the formula is (FG + 0.5 * 3P) / FGA.
+    $sql = "select sum(min2) as MIN, ";
 
 }
 //echo $sql;
