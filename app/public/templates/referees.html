@@ -24,19 +24,15 @@
                 <tr>
                     <th ng-repeat="h in headers">
                         <button class='propDugme' ng-click="sortBy(h.nameOfProperty)">{{h.name}}</button>
-                        <span class="sortorder" ng-show="propertyName === h.nameOfProperty" ng-class="{reverse: reverse}"></span>
+                        <span class="sortorder" ng-show="propertyName === h.nameOfProperty"
+                              ng-class="{reverse: reverse}"></span>
                     </th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="g in games | orderBy:propertyName:reverse ">
+                <tr ng-repeat="g in parovi | orderBy:propertyName:reverse ">
                     <td ng-repeat="h in headers">
-                        <a href="#/games/{{g.gameCode}}" ng-show="isNameProp(h.nameOfProperty)">
-                            {{g[h.nameOfProperty]}}
-                        </a>
-                        <span ng-show="!isNameProp(h.nameOfProperty)">
-                                {{g[h.nameOfProperty]}}
-                        </span>
+                        {{g[h.nameOfProperty]}}
                     </td>
                 </tr>
                 </tbody>
