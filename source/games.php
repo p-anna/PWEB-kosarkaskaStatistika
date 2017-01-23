@@ -30,7 +30,7 @@ if($a != 'null'){
 
 $header = array();
 
-$sql = "select ts1.gameCode as 'gameCode', ts1.season as 'season', round, t1.teamName as team1, t2.teamName as team2, ts1.pts as ptsH, ts2.pts as ptsA, dateOfGame as dateO, attendance as att, stadium as arena, r1.refereeName as ref1, r2.refereeName as ref2, r3.refereeName as ref3 from Game g, Referee r1, Referee r2, Referee r3, TeamStats ts1, TeamStats ts2, Team t1 , Team t2 where r1.idReferee = g.ref1Id and r2.idReferee = g.ref2Id and r3.idReferee = g.ref3Id and ts1.teamId=g.teamH and ts2.teamId=g.teamA and t1.idTeam=ts1.teamId and t2.idTeam = ts2.teamId";
+$sql = "select distinct ts1.gameCode as 'gameCode', ts1.season as 'season', round, t1.teamName as team1, t2.teamName as team2, ts1.pts as ptsH, ts2.pts as ptsA, dateOfGame as dateO, attendance as att, stadium as arena, r1.refereeName as ref1, r2.refereeName as ref2, r3.refereeName as ref3 from Game g, Referee r1, Referee r2, Referee r3, TeamStats ts1, TeamStats ts2, Team t1 , Team t2 where r1.idReferee = g.ref1Id and r2.idReferee = g.ref2Id and r3.idReferee = g.ref3Id and g.gameCode = ts1.gameCode and g.gameCode = ts2.gameCode and ts1.teamId=g.teamH and ts2.teamId=g.teamA and t1.idTeam=ts1.teamId and t2.idTeam = ts2.teamId";
 
 $h0 = new stdClass(); $h0->name="Round"; $h0->nameOfProperty="round";
 array_push($header, $h0);

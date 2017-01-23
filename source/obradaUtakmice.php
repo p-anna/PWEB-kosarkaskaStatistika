@@ -40,7 +40,7 @@ function obradiIgrace($boxscore, $gameCode, $season, $teamId, $i, $conn, $posImg
             $plyr = findPlayerInArrayByID($posImg, $v->jpjugd);
             $a = visinaIDanRodjenja($v->jpjugd, $season);
             $conn->query(
-                "insert into Player(idPlayer, playerName, playerPos, photoURL, height, bornDate, nationality) 
+                "replace into Player(idPlayer, playerName, playerPos, photoURL, height, bornDate, nationality) 
                             values('$v->jpjugd', '$v->acname', '$plyr->p', '$plyr->im', $a[0]*100, '$a[1]', '$a[2]')"
             );
         }
@@ -178,7 +178,7 @@ else
 
 $asdf = $conn->query("select min(gameCode) from PreostaleUtakmice");
 $najmanjaTekma = $asdf->fetch_row()[0];
-for($i = $najmanjaTekma; $i < $najmanjaTekma + 2; $i++) {
+for($i = $najmanjaTekma; $i < $najmanjaTekma + 47; $i++) {
     $rez = $conn->query("select * from PreostaleUtakmice where gameCode=$i");
     if ($rez->num_rows == 1) {
         obradiUtakmicu($i, 2016, $conn);
