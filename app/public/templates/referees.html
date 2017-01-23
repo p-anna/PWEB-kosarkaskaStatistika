@@ -10,20 +10,9 @@
                     <option>All Teams</option>
                     <option ng-repeat="team in teams | orderBy:'Name'">{{team.teamName}}</option>
                 </select>
-                <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="seasonPart">
-                    <option>Full Season</option>
-                    <option>Regular Season</option>
-                    <option>October</option>
-                    <option>November</option>
-                    <option>December</option>
-                    <option>January</option>
-                    <option>February</option>
-                    <option>March</option>
-                    <option>April</option>
-                    <option>May</option>
-                    <option>Top 16</option>
-                    <option>Playoffs</option>
-                    <option>Final Four</option>
+                <select class="form-control col-xs-4" id="sel2" ng-change="prikazi()" ng-model="referee">
+                    <option>All Referees</option>
+                    <option ng-repeat="referee in referees | orderBy:'Name'">{{referee.refereeName}}</option>
                 </select>
             </form>
         </div>
@@ -40,13 +29,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="referee in referees | orderBy:propertyName:reverse ">
+                <tr ng-repeat="g in games | orderBy:propertyName:reverse ">
                     <td ng-repeat="h in headers">
-                        <a href="#/referees/{{referee.refereeID}}" ng-show="isNameProp(h.nameOfProperty)">
-                            {{referee[h.nameOfProperty]}}
+                        <a href="#/games/{{g.gameCode}}" ng-show="isNameProp(h.nameOfProperty)">
+                            {{g[h.nameOfProperty]}}
                         </a>
                         <span ng-show="!isNameProp(h.nameOfProperty)">
-                                {{referee[h.nameOfProperty]}}
+                                {{g[h.nameOfProperty]}}
                         </span>
                     </td>
                 </tr>

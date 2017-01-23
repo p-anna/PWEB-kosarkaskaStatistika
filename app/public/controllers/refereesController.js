@@ -4,7 +4,7 @@ app.controller('refereesController', function($scope, $timeout, $http){
     $scope.teams = [];
 
     $scope.team = "All Teams";
-    $scope.seasonPart = "Full Season";
+    $scope.referee = "All Referees";
 
     $scope.propertyName = '';
     $scope.reverse = true;
@@ -29,9 +29,9 @@ app.controller('refereesController', function($scope, $timeout, $http){
         var season = $scope.seasonPart === "Full Season" ? null : $scope.seasonPart;
 
         $http({
-            url: "../../source/primercic.php",
+            url: "../../source/referee.php",
             method: "GET",
-            params: {team: teamID, seasonPart: season}
+            params: {teamId: $scope.team, refId: $scope.referee}
         }).then(function(response){
             $scope.referees = response.data.referees;
             $scope.headers = response.data.header;
@@ -44,16 +44,21 @@ app.controller('refereesController', function($scope, $timeout, $http){
     init();
 
     function init() {
-        $scope.prikazi();
-        $http.get("../../source/player_listOfTeamsInit.php")
+        $scope.loading = true;
+        $http.get("../../source/initRefereesAndTeams.php")
             .then(function(response) {
-                $scope.teams = response.data;
+                $scope.teams = response.data.teams;
+                $scope.referees = response.data.referees;
             });
+        $scope.prikazi();
     }
+
+
+
 
     $scope.isNameProp = function (propName) {
 
-        if(propName === "refereeName"){
+        if(propName === "gameName"){
             return true;
         }
         else{

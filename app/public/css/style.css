@@ -81,10 +81,14 @@ ul > li > img {
 .table-striped{
     border: solid;
 }
+th{
+    background-color: black;
+    font-size: 12px;
+}
 
 .propDugme{
-    background-color: transparent;
-    border: transparent;
+    background-color: black;
+    border: black;
     color: darkorange;
     text-align: center;
     text-decoration: none;
