@@ -32,14 +32,18 @@ switch($_GET['statisticType']){
         array_push($header, $h2);
         break;
     case "Accumulated Statistics":
-        $sql = "select count(*) as 'GP', sum(pts) as 'PTS' from playerStats where $filter groupBy playerId order by 2 desc";
+        $sql = "select count(*) as 'GP', sum(pts) as 'PTS' from playerStats $filter groupBy playerId";
         break;
     case "Advanced Statistics":
-
-
-        //Effective Field Goal Percentage; the formula is (FG + 0.5 * 3P) / FGA.
-    $sql = "select sum(min2) as MIN, ";
-
+        $sql = "select sum(min2) as MIN2, (sum(2fgm)+0.5*sum(3fgm))/(sum(2fga)+sum(3fga))*100 as 'eFGP', " .
+            " sum(or2)/(sum(teamOffReb)+sum(teamOppOffReb))*100 as 'ORP' " .
+            " from playerstats $filter group by playerId" ;
+        $h0 = new stdClass(); $h0->name="MIN"; $h0->nameOfProperty="MIN2";
+        array_push($header, $h0);
+        $h1 = new stdClass(); $h1->name="eFG%"; $h1->nameOfProperty="eFGP";
+        array_push($header, $h1);
+        $h2 = new stdClass(); $h2->name="OR%"; $h2->nameOfProperty="ORP";
+        array_push($header, $h2);
 }
 //echo $sql;
 //echo var_dump($header);
