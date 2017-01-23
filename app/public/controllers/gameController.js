@@ -9,6 +9,8 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
     $scope.team1Total = [];
     $scope.team2Total = [];
 
+    $scope.statisticType = "Average | Per Game";
+
     $scope.propertyName = '';
     $scope.reverse = true;
 

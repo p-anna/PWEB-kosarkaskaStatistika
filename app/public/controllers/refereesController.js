@@ -23,15 +23,17 @@ app.controller('refereesController', function($scope, $timeout, $http){
         $scope.loading = true;
         /* priprema parametara */
         var teamID = "null";
-        for(var t in $scope.teams){
-            if($scope.team === t.teamName)
-                teamID = t.idTeam;
+        for(var t = 0; t < $scope.teams.length; t++){
+            if($scope.team == $scope.teams[t].teamName)
+                teamID = $scope.teams[t].idTeam;
         }
 
         var refID = "null";
-        for(var r in $scope.referees){
-            if($scope.referee === r.refereeName)
-                refID = r.idReferee;
+        for(var r = 0; r < $scope.referees.length; r++){
+            if($scope.referee == $scope.referees[r].refereeName){
+                console.log($scope.referee + " " + $scope.referees[r].refereeName);
+                refID = $scope.referees[r].idReferee;
+            }
         }
 
         $http({

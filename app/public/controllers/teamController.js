@@ -20,6 +20,7 @@ app.controller('teamController', function($scope, $timeout, $http, $routeParams)
         }).then(function(response){
             $scope.headers = response.data.header;
             $scope.games = response.data.players;
+            $scope.teamName = response.data.teamName;
         });
     }
 

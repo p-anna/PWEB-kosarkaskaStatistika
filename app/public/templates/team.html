@@ -1,7 +1,7 @@
 <div id="wrapper">
 
     <div id="page-wrapper">
-        <h2>Game</h2>
+        <h2>{{teamName.teamName}}</h2>
         <hr>
         <div class="container">
             <form>
@@ -42,7 +42,7 @@
                 <tbody>
                 <tr ng-repeat="g in games | orderBy:propertyName:reverse">
                     <td ng-repeat="h in headers">
-                        <a href="#/teams/{{g.teamId}}" ng-show="isNameProp(h.nameOfProperty)">
+                        <a href="#/games/{{g.gameCode}}" ng-show="isNameProp(h.nameOfProperty)">
                             {{g[h.nameOfProperty]}}
                         </a>
                         <span ng-hide="isNameProp(h.nameOfProperty)">

@@ -37,7 +37,7 @@ $c = $_GET['teamId'];
 
 
 
-$sql = "select distinct if(ts.teamId = (select teamH from Game g where g.gameCode = ts.gameCode and ts.season = g.season), 'H', 'A') as HOME, t2.teamName as ATeam, ts.PTS as PTS ";
+$sql = "select distinct ts2.gameCode as 'gameCode', ts.season as 'season', if(ts.teamId = (select teamH from Game g where g.gameCode = ts.gameCode and ts.season = g.season), 'H', 'A') as HOME, t2.teamName as ATeam, ts.PTS as PTS ";
 $newsql= ", ts.FTM as FTM, ts.FTA as FTA, round((ts.FTM*100)/(ts.FTM + ts.FTA)) as 1P";
 $sql = $sql.$newsql;
 $newsql= ", ts.2FGM as 2FGM, ts.2FGA as 2FGA, round((ts.2FGM*100)/(ts.2FGM + ts.2FGA)) as 2P";
@@ -129,5 +129,7 @@ $i = 0;
 for($i = 0; $i < $rez->num_rows; $i++){
     array_push($tabela, $rez->fetch_assoc());
 }
+
+$poruka->teamName = $conn->query("select teamName from Team where trim(idTeam)=trim('$c')")->fetch_assoc();
 $poruka->players = $tabela;
 echo json_encode($poruka);
