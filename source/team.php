@@ -38,11 +38,11 @@ $c = $_GET['teamId'];
 
 
 $sql = "select distinct ts2.gameCode as 'gameCode', ts.season as 'season', if(ts.teamId = (select teamH from Game g where g.gameCode = ts.gameCode and ts.season = g.season), 'H', 'A') as HOME, t2.teamName as ATeam, ts.PTS as PTS ";
-$newsql= ", ts.FTM as FTM, ts.FTA as FTA, round((ts.FTM*100)/(ts.FTM + ts.FTA)) as 1P";
+$newsql= ", ts.FTM as FTM, ts.FTA as FTA, round(((ts.FTM*100)/(ts.FTM + ts.FTA)),2) as P";
 $sql = $sql.$newsql;
-$newsql= ", ts.2FGM as 2FGM, ts.2FGA as 2FGA, round((ts.2FGM*100)/(ts.2FGM + ts.2FGA)) as 2P";
+$newsql= ", ts.2FGM as 2FGM, ts.2FGA as 2FGA, round(((ts.2FGM*100)/(ts.2FGM + ts.2FGA)),2) as 2P";
 $sql = $sql.$newsql;
-$newsql= ", ts.3FGM as 3FGM, ts.3FGA as 3FGA, round((ts.3FGM*100)/(ts.3FGM + ts.3FGA)) as 3P";
+$newsql= ", ts.3FGM as 3FGM, ts.3FGA as 3FGA, round(((ts.3FGM*100)/(ts.3FGM + ts.3FGA)),2) as 3P";
 $sql = $sql.$newsql;
 $newsql= ", ts.OR2 as OR2, ts.ASS as ASS, ts.TO2 as TO2, ts.STL as STL, ts.BLK as BLK, ts.BLKA as BLKA, ts.CM as CM, ts.RV as RV";
 $sql = $sql.$newsql;
@@ -64,21 +64,21 @@ $h3 = new stdClass(); $h3->name="FTM"; $h3->nameOfProperty="FTM";
 array_push($header, $h3);
 $h4 = new stdClass(); $h4->name="FTA"; $h4->nameOfProperty="FTA";
 array_push($header, $h4);
-$h5 = new stdClass(); $h5->name="P %"; $h5->nameOfProperty="P%";
+$h5 = new stdClass(); $h5->name="FT%"; $h5->nameOfProperty="P";
 array_push($header, $h5);
 
 $h6 = new stdClass(); $h6->name="2FGM"; $h6->nameOfProperty="2FGM";
 array_push($header, $h6);
 $h7 = new stdClass(); $h7->name="2FGA"; $h7->nameOfProperty="2FGA";
 array_push($header, $h7);
-$h8 = new stdClass(); $h8->name="2P %"; $h8->nameOfProperty="2P";
+$h8 = new stdClass(); $h8->name="2FG%"; $h8->nameOfProperty="2P";
 array_push($header, $h8);
 
 $h9 = new stdClass(); $h9->name="3FGM"; $h9->nameOfProperty="3FGM";
 array_push($header, $h9);
 $h10 = new stdClass(); $h10->name="3FGA"; $h10->nameOfProperty="3FGA";
 array_push($header, $h10);
-$h11 = new stdClass(); $h11->name="3P %"; $h11->nameOfProperty="3P";
+$h11 = new stdClass(); $h11->name="3FG%"; $h11->nameOfProperty="3P";
 array_push($header, $h11);
 
 

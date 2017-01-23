@@ -52,21 +52,21 @@ switch($_GET['statisticType']){
         array_push($header, $h2);
         $h3 = new stdClass(); $h3->name="FTA"; $h3->nameOfProperty="FTA";
         array_push($header, $h3);
-        $h4 = new stdClass(); $h4->name="P %"; $h4->nameOfProperty="P%";
+        $h4 = new stdClass(); $h4->name="P%"; $h4->nameOfProperty="P";
         array_push($header, $h4);
 
         $h5 = new stdClass(); $h5->name="2FGM"; $h5->nameOfProperty="2FGM";
         array_push($header, $h5);
         $h6 = new stdClass(); $h6->name="2FGA"; $h6->nameOfProperty="2FGA";
         array_push($header, $h6);
-        $h7 = new stdClass(); $h7->name="2P %"; $h7->nameOfProperty="2P";
+        $h7 = new stdClass(); $h7->name="2P%"; $h7->nameOfProperty="2P";
         array_push($header, $h7);
 
         $h8 = new stdClass(); $h8->name="3FGM"; $h8->nameOfProperty="3FGM";
         array_push($header, $h8);
         $h9 = new stdClass(); $h9->name="3FGA"; $h9->nameOfProperty="3FGA";
         array_push($header, $h9);
-        $h10 = new stdClass(); $h10->name="3P %"; $h10->nameOfProperty="3P";
+        $h10 = new stdClass(); $h10->name="3P%"; $h10->nameOfProperty="3P";
         array_push($header, $h10);
 
 
@@ -110,21 +110,21 @@ switch($_GET['statisticType']){
         array_push($header, $h2);
         $h3 = new stdClass(); $h3->name="FTA"; $h3->nameOfProperty="FTA";
         array_push($header, $h3);
-        $h4 = new stdClass(); $h4->name="P %"; $h4->nameOfProperty="P%";
+        $h4 = new stdClass(); $h4->name="P%"; $h4->nameOfProperty="P";
         array_push($header, $h4);
 
         $h5 = new stdClass(); $h5->name="2FGM"; $h5->nameOfProperty="2FGM";
         array_push($header, $h5);
         $h6 = new stdClass(); $h6->name="2FGA"; $h6->nameOfProperty="2FGA";
         array_push($header, $h6);
-        $h7 = new stdClass(); $h7->name="2P %"; $h7->nameOfProperty="2P";
+        $h7 = new stdClass(); $h7->name="2P%"; $h7->nameOfProperty="2P";
         array_push($header, $h7);
 
         $h8 = new stdClass(); $h8->name="3FGM"; $h8->nameOfProperty="3FGM";
         array_push($header, $h8);
         $h9 = new stdClass(); $h9->name="3FGA"; $h9->nameOfProperty="3FGA";
         array_push($header, $h9);
-        $h10 = new stdClass(); $h10->name="3P %"; $h10->nameOfProperty="3P";
+        $h10 = new stdClass(); $h10->name="3P%"; $h10->nameOfProperty="3P";
         array_push($header, $h10);
 
 
@@ -157,7 +157,7 @@ switch($_GET['statisticType']){
         break;
      case "Average Age":
     //case 3:
-        $sql = "select distinct teamName, round(avg(year(bornDate))) as age from PlayerStats ts join Team t on t.idTeam = ts.teamId join Player p on ts.playerId = p.idPlayer ";
+        $sql = "select distinct teamName, 2017 - round(avg(year(bornDate))) as age from PlayerStats ts join Team t on t.idTeam = ts.teamId join Player p on ts.playerId = p.idPlayer ";
         $sqlnew = " $filter group by ts.teamId";
         $sql = $sql.$sqlnew;
         $h1 = new stdClass(); $h1->name="Name"; $h1->nameOfProperty="teamName";
