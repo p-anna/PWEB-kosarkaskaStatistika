@@ -7,7 +7,6 @@ app.controller('teamController', function($scope, $timeout, $http, $routeParams)
 
     $scope.seasonPart = "Full Season";
 
-   // console.log($routeParams.id);
     init();
 
     function init() {

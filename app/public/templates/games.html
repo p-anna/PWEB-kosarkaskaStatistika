@@ -49,7 +49,7 @@
                 <tr ng-repeat="game in games | orderBy:propertyName:reverse ">
                     <td ng-repeat="h in headers">
                         <a href="#/games/{{game.gameCode}}" ng-show="isNameProp(h.nameOfProperty)">
-                            {{p[h.nameOfProperty]}}
+                            {{game[h.nameOfProperty]}}
                         </a>
                         <span ng-hide="isNameProp(h.nameOfProperty)">
                             {{game[h.nameOfProperty]}}
