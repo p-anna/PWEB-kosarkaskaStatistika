@@ -33,7 +33,7 @@ switch($_GET['statisticType']){
 
     case "Average | Per Game":
     //case 0:
-        $sql = "SELECT distinct teamName, round(avg(PTS)) as PTS, round(avg(FTM)) as FTM, round(avg(FTA)) as FTA, round((avg(FTM)*100)/(avg(FTM) + avg(FTA))) as P ";
+        $sql = "SELECT distinct ts.teamId, teamName, round(avg(PTS)) as PTS, round(avg(FTM)) as FTM, round(avg(FTA)) as FTA, round((avg(FTM)*100)/(avg(FTM) + avg(FTA))) as P ";
         $newsql= ", round(avg(2FGM)) as 2FGM, round(avg(2FGA)) as 2FGA, round((avg(2FGM)*100)/(avg(2FGM) + avg(2FGA))) as 2P";
         $sql = $sql.$newsql;
         $newsql= ", round(avg(3FGM)) as 3FGM, round(avg(3FGA)) as 3FGA, round((avg(3FGM)*100)/(avg(3FGM) + avg(3FGA))) as 3P";

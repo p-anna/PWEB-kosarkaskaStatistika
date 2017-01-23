@@ -2,6 +2,7 @@ body {
     line-height: 2.429;
     background-image: url('../img/background.jpg');
     background-size: 1600px;
+    background-attachment: fixed;
 }
 
 h2 {
@@ -123,4 +124,30 @@ a{
 .velikiLink{
     padding-left: 50px;
     font-size: 20px;
+}
+
+.playerName {
+    margin-left: 85px;
+    color: #d58512;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+table.playerInfo > tbody > tr > td {
+    padding-right: 20px;
+}
+
+table.playerInfo > tbody > tr > td:nth-child(1) {
+    font-weight: bold;
+}
+
+table.playerInfo {
+    float: right;
+    margin-right: 50%;
+    color: #ffe58f;
+}
+
+.span3.well {
+    background-color: transparent;
+    border: none;
 }

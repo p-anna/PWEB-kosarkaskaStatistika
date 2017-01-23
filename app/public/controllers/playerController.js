@@ -12,12 +12,12 @@ app.controller('playerController', function($scope, $timeout, $http, $routeParam
     function init() {
         $scope.loading = true;
         $http({
-            url: "../../source/primercic.php",
+            url: "../../source/player.php",
             method: "GET",
-            params: {screen: "players", id: $routeParams.id}
+            params: {idPlayer: $routeParams.id}
         }).then(function(response){
-            $scope.player = response.data.player;
-            $scope.headers = response.data.header;
+            $scope.player = response.data.info;
+            $scope.pStats = response.data.stats;
         }).finally(function () {
             $scope.loading = false;
         });

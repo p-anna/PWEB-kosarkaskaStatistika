@@ -2,7 +2,30 @@
     <div class="span3 well">
         <a href="#" data-toggle="modal" data-target="#myModal"><img
                 src="{{player.photoURL}}"
-                name="aboutme" width="330" height="165" class="img-circle"></a>
+                name="aboutme" width="22%" height="165" class="img-circle"></a>
+        <table class = "playerInfo">
+            <tbody >
+            <tr>
+                <td>Height</td>
+                <td>{{player.height}} cm</td>
+            </tr>
+            <tr>
+                <td>Nationality</td>
+                <td>{{player.nationality}}</td>
+            </tr>
+            <tr>
+                <td>Born</td>
+                <td>{{player.bornDate | date}}</td>
+            </tr>
+            <tr>
+                <td>Position</td>
+                <td>{{player.playerPos}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="span3" >
+        <h4 class = "playerName">{{player.playerName}}</h4>
     </div>
     <div class="container">
         <table class="table table-striped table-hover">

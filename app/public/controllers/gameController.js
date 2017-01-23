@@ -9,6 +9,8 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
     $scope.team1Total = [];
     $scope.team2Total = [];
 
+    $scope.statisticType = "Average | Per Game";
+
     $scope.propertyName = '';
     $scope.reverse = true;
 
@@ -23,12 +25,12 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
     init();
 
     function init() {
-        /*
+
         $scope.loading = true;
         $http({
-            url: "../../source/primercic.php",
+            url: "../../source/game.php",
             method: "GET",
-            params: {screen: "games", id: $routeParams.id}
+            params: {season: 2016, gameCode: $routeParams.id}
         }).then(function(response){
             $scope.headers = response.data.header;
             $scope.teams = response.data.teams;
@@ -37,11 +39,10 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
             $scope.team1Total = response.data.team1Total;
             $scope.team2Total = response.data.team2Total;
         }).finally(function () {
-            $scope.loadning = false;
-        });
             $scope.loading = false;
         });
-        */
+
+        /*
         $scope.loading = true;
         $http.get("data/game.json")
             .then(function(response){
@@ -56,6 +57,6 @@ app.controller('gameController', function($scope, $timeout, $http, $routeParams)
                 $scope.loading = false;
             });
 
-
+*/
     }
 });
